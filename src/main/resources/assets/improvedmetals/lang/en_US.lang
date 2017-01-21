@@ -166,6 +166,12 @@ item.dragon_chest.name=Dragon Chestplate
 item.dragon_leggs.name=Dragon Leggings
 item.dragon_boots.name=Dragon Boots
 
+item.charged_helmet.name=Charged Helmet
+item.charged_chest.name=Charged Chestplate
+item.charged_jet_chest.name=Charged Jetplate
+item.charged_leggs.name=Charged Leggings
+item.charged_boots.name=Charged Boots
+
 block.improvedmetals:blockCopper.name=Copper Block
 block.improvedmetals:blockTin.name=Tin Block
 block.improvedmetals:blockBronze.name=Bronze Block
