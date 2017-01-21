@@ -1,0 +1,8 @@
+{
+  "parent": "block/orientable",
+  "textures": {
+    "top": "improvedmetals:blocks/blockCombinator_side",
+    "front": "improvedmetals:blocks/blockCombinator_off",
+    "side": "improvedmetals:blocks/blockCombinator_side"
+  }
+}

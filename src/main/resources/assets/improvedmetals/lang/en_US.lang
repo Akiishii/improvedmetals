@@ -1,0 +1,206 @@
+itemGroup.improvedmetals=Improved Metals
+jei.improvedmetals.desc.Combinator=Combinator(Improved Metals)
+jei.improvedmetals.recipe.Combinator=Combinator(Improved Metals)
+
+item.improvedmetals:ingot.0.name=Copper Ingot
+item.improvedmetals:ingot.1.name=Tin Ingot
+item.improvedmetals:ingot.2.name=Bronze Ingot
+item.improvedmetals:ingot.3.name=Silver Ingot
+item.improvedmetals:ingot.4.name=Lead Ingot
+item.improvedmetals:ingot.5.name=Diamond Ingot
+item.improvedmetals:ingot.6.name=Emerald Ingot
+item.improvedmetals:ingot.7.name=Obsidian Ingot
+item.improvedmetals:ingot.8.name=Glowstone Ingot
+item.improvedmetals:ingot.9.name=Prismarine Ingot
+item.improvedmetals:ingot.10.name=Improved Diamond Ingot
+item.improvedmetals:ingot.11.name=Improved Emerald Ingot
+item.improvedmetals:ingot.12.name=Improved Obsidian Ingot
+item.improvedmetals:ingot.13.name=Improved Glowstone Ingot
+item.improvedmetals:ingot.14.name=Wither Ingot
+item.improvedmetals:ingot.15.name=Dragon Ingot
+
+item.improvedmetals:nugget.0.name=Copper Nugget
+item.improvedmetals:nugget.1.name=Tin Nugget
+item.improvedmetals:nugget.2.name=Bronze Nugget
+item.improvedmetals:nugget.3.name=Silver Nugget
+item.improvedmetals:nugget.4.name=Lead Nugget
+item.improvedmetals:nugget.5.name=Diamond Nugget
+item.improvedmetals:nugget.6.name=Emerald Nugget
+item.improvedmetals:nugget.7.name=Obsidian Nugget
+item.improvedmetals:nugget.8.name=Glowstone Nugget
+item.improvedmetals:nugget.9.name=Prismarine Nugget
+item.improvedmetals:nugget.10.name=Improved Diamond Nugget
+item.improvedmetals:nugget.11.name=Improved Emerald Nugget
+item.improvedmetals:nugget.12.name=Improved Obsidian Nugget
+item.improvedmetals:nugget.13.name=Improved Glowstone Nugget
+item.improvedmetals:nugget.14.name=Wither Nugget
+item.improvedmetals:nugget.15.name=Dragon Nugget
+
+item.improvedmetals:plate.0.name=Copper Plate
+item.improvedmetals:plate.1.name=Tin Plate
+item.improvedmetals:plate.2.name=Bronze Plate
+item.improvedmetals:plate.3.name=Silver Plate
+item.improvedmetals:plate.4.name=Lead Plate
+item.improvedmetals:plate.5.name=Diamond Plate
+item.improvedmetals:plate.6.name=Emerald Plate
+item.improvedmetals:plate.7.name=Obsidian Plate
+item.improvedmetals:plate.8.name=Glowstone Plate
+item.improvedmetals:plate.9.name=Prismarine Plate
+item.improvedmetals:plate.10.name=Improved Diamond Plate
+item.improvedmetals:plate.11.name=Improved Emerald Plate
+item.improvedmetals:plate.12.name=Improved Obsidian Plate
+item.improvedmetals:plate.13.name=Improved Glowstone Plate
+item.improvedmetals:plate.14.name=Wither Plate
+item.improvedmetals:plate.15.name=Dragon Plate
+
+item.improvedmetals:dragon_claw.name=Dragon Claw
+item.improvedmetals:dragon_scale.name=Dragon Scale
+item.improvedmetals:wither_bone.name=Wither Bone
+
+item.improvedmetals:solar_panel_screen.name=Solar Panel Screen
+
+item.improvedmetals:copper_axe.name=Copper Axe
+item.improvedmetals:copper_hoe.name=Copper Hoe
+item.improvedmetals:copper_pickaxe.name=Copper Pickaxe
+item.improvedmetals:copper_shovel.name=Copper Shovel
+item.improvedmetals:copper_sword.name=Copper Sword
+
+item.improvedmetals:bronze_axe.name=Bronze Axe
+item.improvedmetals:bronze_hoe.name=Bronze Hoe
+item.improvedmetals:bronze_pickaxe.name=Bronze Pickaxe
+item.improvedmetals:bronze_shovel.name=Bronze Shovel
+item.improvedmetals:bronze_sword.name=Bronze Sword
+
+item.improvedmetals:emerald_axe.name=Emerald Axe
+item.improvedmetals:emerald_hoe.name=Emerald Hoe
+item.improvedmetals:emerald_pickaxe.name=Emerald Pickaxe
+item.improvedmetals:emerald_shovel.name=Emerald Shovel
+item.improvedmetals:emerald_sword.name=Emerald Sword
+
+item.improvedmetals:obsidian_axe.name=Obsdiain Axe
+item.improvedmetals:obsidian_hoe.name=Obsdiain Hoe
+item.improvedmetals:obsidian_pickaxe.name=Obsdiain Pickaxe
+item.improvedmetals:obsidian_shovel.name=Obsdiain Shovel
+item.improvedmetals:obsidian_sword.name=Obsdiain Sword
+
+item.improvedmetals:glowstone_axe.name=Glowstone Axe
+item.improvedmetals:glowstone_hoe.name=Glowstone Hoe
+item.improvedmetals:glowstone_pickaxe.name=Glowstone Pickaxe
+item.improvedmetals:glowstone_shovel.name=Glowstone Shovel
+item.improvedmetals:glowstone_sword.name=Glowstone Sword
+
+item.improvedmetals:prismarine_axe.name=Prismarine Axe
+item.improvedmetals:prismarine_hoe.name=Prismarine Hoe
+item.improvedmetals:prismarine_pickaxe.name=Prismarine Pickaxe
+item.improvedmetals:prismarine_shovel.name=Prismarine Shovel
+item.improvedmetals:prismarine_sword.name=Prismarine Sword
+
+item.improvedmetals:improved_diamond_axe.name=Improved Diamond Axe
+item.improvedmetals:improved_diamond_hoe.name=Improved Diamond Hoe
+item.improvedmetals:improved_diamond_pickaxe.name=Improved Diamond Pickaxe
+item.improvedmetals:improved_diamond_shovel.name=Improved Diamond Shovel
+item.improvedmetals:improved_diamond_sword.name=Improved Diamond Sword
+
+item.improvedmetals:improved_emerald_axe.name=Improved Emerald Axe
+item.improvedmetals:improved_emerald_hoe.name=Improved Emerald Hoe
+item.improvedmetals:improved_emerald_pickaxe.name=Improved Emerald Pickaxe
+item.improvedmetals:improved_emerald_shovel.name=Improved Emerald Shovel
+item.improvedmetals:improved_emerald_sword.name=Improved Emerald Sword
+
+item.improvedmetals:improved_obsidian_axe.name=Improved Obsidian Axe
+item.improvedmetals:improved_obsidian_hoe.name=Improved Obsidian Hoe
+item.improvedmetals:improved_obsidian_pickaxe.name=Improved Obsidian Pickaxe
+item.improvedmetals:improved_obsidian_shovel.name=Improved Obsidian Shovel
+item.improvedmetals:improved_obsidian_sword.name=Improved Obsidian Sword
+
+item.improvedmetals:improved_glowstone_axe.name=Improved Glowstone Axe
+item.improvedmetals:improved_glowstone_hoe.name=Improved Glowstone Hoe
+item.improvedmetals:improved_glowstone_pickaxe.name=Improved Glowstone Pickaxe
+item.improvedmetals:improved_glowstone_shovel.name=Improved Glowstone Shovel
+item.improvedmetals:improved_glowstone_sword.name=Improved Glowstone Sword
+
+item.improvedmetals:wither_axe.name=Wither Axe
+item.improvedmetals:wither_hoe.name=Wither Hoe
+item.improvedmetals:wither_pickaxe.name=Wither Pickaxe
+item.improvedmetals:wither_shovel.name=Wither Shovel
+item.improvedmetals:wither_sword.name=Wither Sword
+
+item.improvedmetals:dragon_axe.name=Dragon Axe
+item.improvedmetals:dragon_hoe.name=Dragon Hoe
+item.improvedmetals:dragon_pickaxe.name=Dragon Pickaxe
+item.improvedmetals:dragon_shovel.name=Dragon Shovel
+item.improvedmetals:dragon_sword.name=Dragon Sword
+
+item.emerald_helmet.name=Emerald Helmet
+item.emerald_chest.name=Emerald Chestplate
+item.emerald_leggs.name=Emerald Leggings
+item.emerald_boots.name=Emerald Boots
+
+item.obsidian_helmet.name=Obsidian Helmet
+item.obsidian_chest.name=Obsidian Chestplate
+item.obsidian_leggs.name=Obsidian Leggings
+item.obsidian_boots.name=Obsidian Boots
+
+item.imdiamond_helmet.name=Improved Diamond Helmet
+item.imdiamond_chest.name=Improved Diamond Chestplate
+item.imdiamond_leggs.name=Improved Diamond Leggings
+item.imdiamond_boots.name=Improved Diamond Boots
+
+item.imemerald_helmet.name=Improved Emerald Helmet
+item.imemerald_chest.name=Improved Emerald Chestplate
+item.imemerald_leggs.name=Improved Emerald Leggings
+item.imemerald_boots.name=Improved Emerald Boots
+
+item.imobsidian_helmet.name=Improved Obsidian Helmet
+item.imobsidian_chest.name=Improved Obsidian Chestplate
+item.imobsidian_leggs.name=Improved Obsidian Leggings
+item.imobsidian_boots.name=Improved Obsidian Boots
+
+item.wither_helmet.name=Wither Helmet
+item.wither_chest.name=Wither Chestplate
+item.wither_leggs.name=Wither Leggings
+item.wither_boots.name=Wither Boots
+
+item.dragon_helmet.name=Dragon Helmet
+item.dragon_chest.name=Dragon Chestplate
+item.dragon_leggs.name=Dragon Leggings
+item.dragon_boots.name=Dragon Boots
+
+block.improvedmetals:blockCopper.name=Copper Block
+block.improvedmetals:blockTin.name=Tin Block
+block.improvedmetals:blockBronze.name=Bronze Block
+block.improvedmetals:blockSilver.name=Silver Block
+block.improvedmetals:blockLead.name=Lead Block
+block.improvedmetals:blockDiamond.name=Diamond Block
+block.improvedmetals:blockEmerald.name=Emerald Block
+block.improvedmetals:blockObsidian.name=Obsidian Block
+block.improvedmetals:blockGlowstone.name=Glowstone Block
+block.improvedmetals:blockPrismarine.name=Prismarine Block
+block.improvedmetals:blockImprovedDiamond.name=Improved Diamond Block
+block.improvedmetals:blockImprovedEmerald.name=Improved Emerald Block
+block.improvedmetals:blockImprovedObsidian.name=Improved Obsidian Block
+block.improvedmetals:blockImprovedGlowstone.name=Improved Glowstone Block
+block.improvedmetals:blockWither.name=Wither Block
+block.improvedmetals:blockDragon.name=Dragon Block
+
+block.improvedmetals:oreCopper.name=Copper Ore
+block.improvedmetals:oreTin.name=Tin Ore
+block.improvedmetals:oreSilver.name=Silver Ore
+block.improvedmetals:oreLead.name=Lead Ore
+block.improvedmetals:orePrismarine.name=Prismarine Ore
+
+block.improvedmetals:blockWitherObsidian.name=Wither Obsidian
+block.improvedmetals:blockDragonObsidian.name=Dragon Obsidian
+
+tile.blockCombinator.name=Combinator
+
+block.improvedmetals:blockSolarPanelTier1.name=Solar Panel (Tier 1)
+block.improvedmetals:blockSolarPanelTier2.name=Solar Panel (Tier 2)
+block.improvedmetals:blockSolarPanelTier3.name=Solar Panel (Tier 3)
+block.improvedmetals:blockSolarPanelTier4.name=Solar Panel (Tier 4)
+block.improvedmetals:blockSolarPanelTier5.name=Solar Panel (Tier 5)
+block.improvedmetals:blockSolarPanelTier6.name=Solar Panel (Tier 6)
+
+message.improvedmetals.panel.status=This solar panel contains %dT/%dT. Generating %dT/t.
+material.glowstone.name=Glowstone
+modifier.extra-modifier.name=Extra Modifier
