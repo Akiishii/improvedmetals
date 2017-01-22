@@ -1,4 +1,4 @@
-package de.improvedmetals.common.utils;
+package de.improvedmetals.common.lib;
 
 public class Names {
 

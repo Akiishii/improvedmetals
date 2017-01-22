@@ -205,6 +205,8 @@ public class ClientProxy extends CommonProxy{
 		
 		ModelLoader.setCustomModelResourceLocation(IMItems.FORGE_HAMMER, 0, new ModelResourceLocation(ImprovedMetals.MODID + ":forge_hammer", "inventory"));
 		
+		ModelLoader.setCustomModelResourceLocation(IMItems.ANTI_MATERIALIZER, 0, new ModelResourceLocation(ImprovedMetals.MODID + ":anti_materializer", "inventory"));
+		
 		ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(IMBlocks.COPPER_ORE), 0, new ModelResourceLocation(ImprovedMetals.MODID + ":oreCopper", "inventory"));
 		ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(IMBlocks.TIN_ORE), 0, new ModelResourceLocation(ImprovedMetals.MODID + ":oreTin", "inventory"));
 		ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(IMBlocks.SILVER_ORE), 0, new ModelResourceLocation(ImprovedMetals.MODID + ":oreSilver", "inventory"));
@@ -284,6 +286,12 @@ public class ClientProxy extends CommonProxy{
 		ModelLoader.setCustomModelResourceLocation(IMItems.DRAGON_LEGGS, 0, new ModelResourceLocation(ImprovedMetals.MODID + ":dragon_leggs", "inventory"));
 		ModelLoader.setCustomModelResourceLocation(IMItems.DRAGON_BOOTS, 0, new ModelResourceLocation(ImprovedMetals.MODID + ":dragon_boots", "inventory"));
 
+		ModelLoader.setCustomModelResourceLocation(IMItems.TESLA_HELMET, 0, new ModelResourceLocation(ImprovedMetals.MODID + ":chargedHelmet", "inventory"));
+		ModelLoader.setCustomModelResourceLocation(IMItems.TESLA_CHEST, 0, new ModelResourceLocation(ImprovedMetals.MODID + ":chargedChest", "inventory"));
+		ModelLoader.setCustomModelResourceLocation(IMItems.TESLA_JET_CHEST, 0, new ModelResourceLocation(ImprovedMetals.MODID + ":chargedJetChest", "inventory"));
+		ModelLoader.setCustomModelResourceLocation(IMItems.TESLA_LEGGS, 0, new ModelResourceLocation(ImprovedMetals.MODID + ":chargedLeggs", "inventory"));
+		ModelLoader.setCustomModelResourceLocation(IMItems.TESLA_BOOTS, 0, new ModelResourceLocation(ImprovedMetals.MODID + ":chargedBoots", "inventory"));
+		
 	}
 	
 	@Override

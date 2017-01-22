@@ -2,7 +2,7 @@ package de.improvedmetals.common.blocks.machine;
 
 import de.improvedmetals.ImprovedMetals;
 import de.improvedmetals.common.config.ConfigValues;
-import de.improvedmetals.common.tiles.TileCombinatorTier3;
+import de.improvedmetals.common.tiles.combinator.TileCombinatorTier3;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;

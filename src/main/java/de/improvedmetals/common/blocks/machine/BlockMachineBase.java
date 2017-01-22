@@ -7,8 +7,8 @@ import com.google.common.collect.Lists;
 
 import de.improvedmetals.ImprovedMetals;
 import de.improvedmetals.common.items.ItemBlockBase;
+import de.improvedmetals.common.lib.IRegistry;
 import de.improvedmetals.common.lib.enums.EnumMachineryState;
-import de.improvedmetals.common.utils.IRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.SoundType;

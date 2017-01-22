@@ -102,5 +102,8 @@ public class ConfigValues {
 	
 	public static boolean allowFlight = true;
 	
+	public static final int powerDrawPerTickOnFlight = 1;
+	public static final int damageMultiplier = 4;
+	
 	
 }

@@ -1,4 +1,4 @@
-package de.improvedmetals.common.items.stuff;
+package de.improvedmetals.common.items.material;
 
 import de.improvedmetals.ImprovedMetals;
 import de.improvedmetals.common.items.ItemBase;

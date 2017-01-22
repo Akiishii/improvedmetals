@@ -5,7 +5,7 @@ import javax.annotation.Nonnull;
 import de.improvedmetals.ImprovedMetals;
 import de.improvedmetals.api.recipe.combinator.CombinatorRecipeObject;
 import de.improvedmetals.common.integration.IMPlugin;
-import de.improvedmetals.common.tiles.TileCombinatorTier1;
+import de.improvedmetals.common.tiles.combinator.TileCombinatorTier1;
 import mezz.jei.api.IGuiHelper;
 import mezz.jei.api.gui.IDrawable;
 import mezz.jei.api.gui.IDrawableAnimated;

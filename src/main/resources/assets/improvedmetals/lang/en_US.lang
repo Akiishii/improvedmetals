@@ -131,6 +131,16 @@ item.improvedmetals:dragon_pickaxe.name=Dragon Pickaxe
 item.improvedmetals:dragon_shovel.name=Dragon Shovel
 item.improvedmetals:dragon_sword.name=Dragon Sword
 
+item.improvedmetals:forge_hammer.name=Forge Hammer
+item.antiMaterializer=Anti Materializer
+
+item.battery2k.name=Battery
+item.battery8k.name=Battery
+item.battery32k.name=Battery
+item.battery128k.name=Battery
+item.battery512k.name=Battery
+item.battery2M.name=Battery
+
 item.emerald_helmet.name=Emerald Helmet
 item.emerald_chest.name=Emerald Chestplate
 item.emerald_leggs.name=Emerald Leggings
@@ -198,7 +208,10 @@ block.improvedmetals:orePrismarine.name=Prismarine Ore
 block.improvedmetals:blockWitherObsidian.name=Wither Obsidian
 block.improvedmetals:blockDragonObsidian.name=Dragon Obsidian
 
-tile.blockCombinator.name=Combinator
+tile.blockCombinatorTier1.name=Combinator (Tier 1)
+tile.blockCombinatorTier2.name=Combinator (Tier 2)
+tile.blockCombinatorTier3.name=Combinator (Tier 3)
+tile.blockCombinatorTier4.name=Combinator (Tier 4)
 
 block.improvedmetals:blockSolarPanelTier1.name=Solar Panel (Tier 1)
 block.improvedmetals:blockSolarPanelTier2.name=Solar Panel (Tier 2)
@@ -206,7 +219,15 @@ block.improvedmetals:blockSolarPanelTier3.name=Solar Panel (Tier 3)
 block.improvedmetals:blockSolarPanelTier4.name=Solar Panel (Tier 4)
 block.improvedmetals:blockSolarPanelTier5.name=Solar Panel (Tier 5)
 block.improvedmetals:blockSolarPanelTier6.name=Solar Panel (Tier 6)
+block.improvedmetals:blockSolarPanelTier7.name=Solar Panel (Tier 7)
+block.improvedmetals:blockSolarPanelTier8.name=Solar Panel (Tier 8)
+block.improvedmetals:blockSolarPanelTier9.name=Solar Panel (Tier 9)
+block.improvedmetals:blockSolarPanelTier10.name=Solar Panel (Tier 10)
 
 message.improvedmetals.panel.status=This solar panel contains %dT/%dT. Generating %dT/t.
 material.glowstone.name=Glowstone
 modifier.extra-modifier.name=Extra Modifier
+
+tooltip.improvedmetals.battery.noDischarge=Not charging other items in inventory
+tooltip.improvedmetals.battery.discharge=Charging other items in inventory
+tooltip.improvedmetals.battery.changeMode=Sneak-right-click to toggle.

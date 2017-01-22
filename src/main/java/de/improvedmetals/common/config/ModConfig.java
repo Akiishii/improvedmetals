@@ -12,6 +12,7 @@ public class ModConfig {
 	public static final String categorySettings = "settings";
 	public static final String categoryDurability = "durability";
 	public static final String categoryOreGen = "oreGen";
+	public static final String categoryPowerGen = "powerGen";
 
 	@SubscribeEvent
 	public void onConfigChanged(ConfigChangedEvent.OnConfigChangedEvent e){
@@ -95,6 +96,47 @@ public class ModConfig {
 		ConfigValues.oreGenExperienceMinY = config.getInt("oreGenExperienceMinY", categoryOreGen, ConfigValues.oreGenExperienceMinY, 1, 256, "Set the minY-Level for Experience Ore to generate");
 		ConfigValues.oreGenExperienceMaxY = config.getInt("oreGenExperienceMaxY", categoryOreGen, ConfigValues.oreGenExperienceMaxY, 1, 256, "Set the maxY-Level for Experience Ore to generate");
 		
+		config.addCustomCategoryComment(categoryPowerGen, "Configure Power Generation in Improved Metals");
+		
+		ConfigValues.tier1PanelCapacity = config.getInt("tier1PanelCapacity", categoryPowerGen, ConfigValues.tier1PanelCapacity, Integer.MIN_VALUE, Integer.MAX_VALUE, "Capacity of Tier 1 Solar Panels");
+		ConfigValues.tier1PanelPowerGen = config.getInt("tier1PanelPowerGen", categoryPowerGen, ConfigValues.tier1PanelPowerGen, Integer.MIN_VALUE, Integer.MAX_VALUE, "Power Generation of Tier 1 Solar Panels");
+		ConfigValues.tier1PanelTransferRate = config.getInt("tier1PanelTransferRate", categoryPowerGen, ConfigValues.tier1PanelTransferRate, Integer.MIN_VALUE, Integer.MAX_VALUE, "Transfer Rate of Tier 1 Solar Panels");
+		
+		ConfigValues.tier2PanelCapacity = config.getInt("tier2PanelCapacity", categoryPowerGen, ConfigValues.tier2PanelCapacity, Integer.MIN_VALUE, Integer.MAX_VALUE, "Capacity of Tier 2 Solar Panels");
+		ConfigValues.tier2PanelPowerGen = config.getInt("tier2PanelPowerGen", categoryPowerGen, ConfigValues.tier2PanelPowerGen, Integer.MIN_VALUE, Integer.MAX_VALUE, "Power Generation of Tier 2 Solar Panels");
+		ConfigValues.tier2PanelTransferRate = config.getInt("tier2PanelTransferRate", categoryPowerGen, ConfigValues.tier2PanelTransferRate, Integer.MIN_VALUE, Integer.MAX_VALUE, "Transfer Rate of Tier 2 Solar Panels");
+		
+		ConfigValues.tier3PanelCapacity = config.getInt("tier3PanelCapacity", categoryPowerGen, ConfigValues.tier3PanelCapacity, Integer.MIN_VALUE, Integer.MAX_VALUE, "Capacity of Tier 3 Solar Panels");
+		ConfigValues.tier3PanelPowerGen = config.getInt("tier3PanelPowerGen", categoryPowerGen, ConfigValues.tier3PanelPowerGen, Integer.MIN_VALUE, Integer.MAX_VALUE, "Power Generation of Tier 3 Solar Panels");
+		ConfigValues.tier3PanelTransferRate = config.getInt("tier3PanelTransferRate", categoryPowerGen, ConfigValues.tier3PanelTransferRate, Integer.MIN_VALUE, Integer.MAX_VALUE, "Transfer Rate of Tier 3 Solar Panels");
+		
+		ConfigValues.tier4PanelCapacity = config.getInt("tier4PanelCapacity", categoryPowerGen, ConfigValues.tier4PanelCapacity, Integer.MIN_VALUE, Integer.MAX_VALUE, "Capacity of Tier 4 Solar Panels");
+		ConfigValues.tier4PanelPowerGen = config.getInt("tier4PanelPowerGen", categoryPowerGen, ConfigValues.tier4PanelPowerGen, Integer.MIN_VALUE, Integer.MAX_VALUE, "Power Generation of Tier 4 Solar Panels");
+		ConfigValues.tier4PanelTransferRate = config.getInt("tier4PanelTransferRate", categoryPowerGen, ConfigValues.tier4PanelTransferRate, Integer.MIN_VALUE, Integer.MAX_VALUE, "Transfer Rate of Tier 4 Solar Panels");
+		
+		ConfigValues.tier5PanelCapacity = config.getInt("tier5PanelCapacity", categoryPowerGen, ConfigValues.tier5PanelCapacity, Integer.MIN_VALUE, Integer.MAX_VALUE, "Capacity of Tier 5 Solar Panels");
+		ConfigValues.tier5PanelPowerGen = config.getInt("tier5PanelPowerGen", categoryPowerGen, ConfigValues.tier5PanelPowerGen, Integer.MIN_VALUE, Integer.MAX_VALUE, "Power Generation of Tier 5 Solar Panels");
+		ConfigValues.tier5PanelTransferRate = config.getInt("tier5PanelTransferRate", categoryPowerGen, ConfigValues.tier5PanelTransferRate, Integer.MIN_VALUE, Integer.MAX_VALUE, "Transfer Rate of Tier 5 Solar Panels");
+		
+		ConfigValues.tier6PanelCapacity = config.getInt("tier6PanelCapacity", categoryPowerGen, ConfigValues.tier6PanelCapacity, Integer.MIN_VALUE, Integer.MAX_VALUE, "Capacity of Tier 6 Solar Panels");
+		ConfigValues.tier6PanelPowerGen = config.getInt("tier6PanelPowerGen", categoryPowerGen, ConfigValues.tier6PanelPowerGen, Integer.MIN_VALUE, Integer.MAX_VALUE, "Power Generation of Tier 6 Solar Panels");
+		ConfigValues.tier6PanelTransferRate = config.getInt("tier6PanelTransferRate", categoryPowerGen, ConfigValues.tier6PanelTransferRate, Integer.MIN_VALUE, Integer.MAX_VALUE, "Transfer Rate of Tier 6 Solar Panels");
+		
+		ConfigValues.tier7PanelCapacity = config.getInt("tier7PanelCapacity", categoryPowerGen, ConfigValues.tier7PanelCapacity, Integer.MIN_VALUE, Integer.MAX_VALUE, "Capacity of Tier 7 Solar Panels");
+		ConfigValues.tier7PanelPowerGen = config.getInt("tier7PanelPowerGen", categoryPowerGen, ConfigValues.tier7PanelPowerGen, Integer.MIN_VALUE, Integer.MAX_VALUE, "Power Generation of Tier 7 Solar Panels");
+		ConfigValues.tier7PanelTransferRate = config.getInt("tier7PanelTransferRate", categoryPowerGen, ConfigValues.tier7PanelTransferRate, Integer.MIN_VALUE, Integer.MAX_VALUE, "Transfer Rate of Tier 7 Solar Panels");
+		
+		ConfigValues.tier8PanelCapacity = config.getInt("tier8PanelCapacity", categoryPowerGen, ConfigValues.tier8PanelCapacity, Integer.MIN_VALUE, Integer.MAX_VALUE, "Capacity of Tier 8 Solar Panels");
+		ConfigValues.tier8PanelPowerGen = config.getInt("tier8PanelPowerGen", categoryPowerGen, ConfigValues.tier8PanelPowerGen, Integer.MIN_VALUE, Integer.MAX_VALUE, "Power Generation of Tier 8 Solar Panels");
+		ConfigValues.tier8PanelTransferRate = config.getInt("tier8PanelTransferRate", categoryPowerGen, ConfigValues.tier8PanelTransferRate, Integer.MIN_VALUE, Integer.MAX_VALUE, "Transfer Rate of Tier 8 Solar Panels");
+		
+		ConfigValues.tier9PanelCapacity = config.getInt("tier9PanelCapacity", categoryPowerGen, ConfigValues.tier9PanelCapacity, Integer.MIN_VALUE, Integer.MAX_VALUE, "Capacity of Tier 9 Solar Panels");
+		ConfigValues.tier9PanelPowerGen = config.getInt("tier9PanelPowerGen", categoryPowerGen, ConfigValues.tier9PanelPowerGen, Integer.MIN_VALUE, Integer.MAX_VALUE, "Power Generation of Tier 9 Solar Panels");
+		ConfigValues.tier9PanelTransferRate = config.getInt("tier9PanelTransferRate", categoryPowerGen, ConfigValues.tier9PanelTransferRate, Integer.MIN_VALUE, Integer.MAX_VALUE, "Transfer Rate of Tier 9 Solar Panels");
+		
+		ConfigValues.tier10PanelCapacity = config.getInt("tier10PanelCapacity", categoryPowerGen, ConfigValues.tier10PanelCapacity, Integer.MIN_VALUE, Integer.MAX_VALUE, "Capacity of Tier 10 Solar Panels");
+		ConfigValues.tier10PanelPowerGen = config.getInt("tier10PanelPowerGen", categoryPowerGen, ConfigValues.tier10PanelPowerGen, Integer.MIN_VALUE, Integer.MAX_VALUE, "Power Generation of Tier 10 Solar Panels");
+		ConfigValues.tier10PanelTransferRate = config.getInt("tier10PanelTransferRate", categoryPowerGen, ConfigValues.tier10PanelTransferRate, Integer.MIN_VALUE, Integer.MAX_VALUE, "Transfer Rate of Tier 10 Solar Panels");
 		
 		if(config.hasChanged()){
 			config.save();

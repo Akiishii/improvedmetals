@@ -2,8 +2,8 @@ package de.improvedmetals.common.container.combinator;
 
 import de.improvedmetals.api.recipe.combinator.CombinatorRecipe;
 import de.improvedmetals.common.lib.gui.widgets.slot.SlotCombinatorOutput;
-import de.improvedmetals.common.tiles.TileCombinatorTier1;
-import de.improvedmetals.common.tiles.TileCombinatorTier4;
+import de.improvedmetals.common.tiles.combinator.TileCombinatorTier1;
+import de.improvedmetals.common.tiles.combinator.TileCombinatorTier4;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;

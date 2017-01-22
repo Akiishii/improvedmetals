@@ -1,4 +1,4 @@
-package de.improvedmetals.common.tiles;
+package de.improvedmetals.common.tiles.combinator;
 
 import java.util.List;
 

@@ -34,12 +34,14 @@ import de.improvedmetals.common.items.armor.wither.ItemWitherBoots;
 import de.improvedmetals.common.items.armor.wither.ItemWitherChest;
 import de.improvedmetals.common.items.armor.wither.ItemWitherHelmet;
 import de.improvedmetals.common.items.armor.wither.ItemWitherLeggs;
+import de.improvedmetals.common.items.energy.ItemBattery;
+import de.improvedmetals.common.items.material.ItemExperiencePearl;
 import de.improvedmetals.common.items.material.ItemIngot;
 import de.improvedmetals.common.items.material.ItemMaterial;
 import de.improvedmetals.common.items.material.ItemNugget;
 import de.improvedmetals.common.items.material.ItemPlate;
-import de.improvedmetals.common.items.stuff.ItemExperiencePearl;
 import de.improvedmetals.common.items.tools.ToolAxe;
+import de.improvedmetals.common.items.tools.ToolChargedAntiMaterializer;
 import de.improvedmetals.common.items.tools.ToolForgeHammer;
 import de.improvedmetals.common.items.tools.ToolHoe;
 import de.improvedmetals.common.items.tools.ToolPickaxe;
@@ -53,109 +55,166 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 public class IMItems {
 
 	public static List<Item> ITEMS = new ArrayList();
-	public static ItemIngot INGOT = new ItemIngot();
-	public static ItemNugget NUGGET = new ItemNugget();
-	public static ItemPlate PLATE = new ItemPlate();
-	public static ItemMaterial DRAGON_CLAW = new ItemMaterial("dragon_claw");
-	public static ItemMaterial DRAGON_SCALE = new ItemMaterial("dragon_scale");
-	public static ItemMaterial WITHER_BONE = new ItemMaterial("wither_bone");
-	public static ItemMaterial SOLAR_PANEL_SCREEN = new ItemMaterial("solar_panel_screen");
-	public static ItemExperiencePearl EXPERIENCE_PEARL = new ItemExperiencePearl("experience_orb");
-	public static ToolAxe COPPER_AXE = new ToolAxe(MaterialHandler.TOOLS.COPPER, "copper_axe");
-	public static ToolAxe BRONZE_AXE = new ToolAxe(MaterialHandler.TOOLS.BRONZE, "bronze_axe");
-	public static ToolAxe EMERALD_AXE = new ToolAxe(MaterialHandler.TOOLS.EMERALD, "emerald_axe");
-	public static ToolAxe OBSIDIAN_AXE = new ToolAxe(MaterialHandler.TOOLS.OBSIDIAN, "obsidian_axe");
-	public static ToolAxe GLOWSTONE_AXE = new ToolAxe(MaterialHandler.TOOLS.GLOWSTONE, "glowstone_axe");
-	public static ToolAxe PRISMARINE_AXE = new ToolAxe(MaterialHandler.TOOLS.PRISMARINE, "prismarine_axe");
-	public static ToolAxe IMPROVED_DIAMOND_AXE = new ToolAxe(MaterialHandler.TOOLS.IMPROVED_DIAMOND, "improved_diamond_axe");
-	public static ToolAxe IMPROVED_EMERALD_AXE = new ToolAxe(MaterialHandler.TOOLS.IMPROVED_EMERALD, "improved_emerald_axe");
-	public static ToolAxe IMPROVED_OBSIDIAN_AXE = new ToolAxe(MaterialHandler.TOOLS.IMPROVED_OBSIDIAN, "improved_obsidian_axe");
-	public static ToolAxe IMPROVED_GLOWSTONE_AXE = new ToolAxe(MaterialHandler.TOOLS.IMPROVED_GLOWSTONE, "improved_glowstone_axe");
-	public static ToolAxe WITHER_AXE = new ToolAxe(MaterialHandler.TOOLS.WITHER, "wither_axe");
-	public static ToolAxe DRAGON_AXE = new ToolAxe(MaterialHandler.TOOLS.DRAGON, "dragon_axe");
-	public static ToolHoe COPPER_HOE = new ToolHoe(MaterialHandler.TOOLS.COPPER, "copper_hoe");
-	public static ToolHoe BRONZE_HOE = new ToolHoe(MaterialHandler.TOOLS.BRONZE, "bronze_hoe");
-	public static ToolHoe EMERALD_HOE = new ToolHoe(MaterialHandler.TOOLS.EMERALD, "emerald_hoe");
-	public static ToolHoe OBSIDIAN_HOE = new ToolHoe(MaterialHandler.TOOLS.OBSIDIAN, "obsidian_hoe");
-	public static ToolHoe GLOWSTONE_HOE = new ToolHoe(MaterialHandler.TOOLS.GLOWSTONE, "glowstone_hoe");
-	public static ToolHoe PRISMARINE_HOE = new ToolHoe(MaterialHandler.TOOLS.PRISMARINE, "prismarine_hoe");
-	public static ToolHoe IMPROVED_DIAMOND_HOE = new ToolHoe(MaterialHandler.TOOLS.IMPROVED_DIAMOND, "improved_diamond_hoe");
-	public static ToolHoe IMPROVED_EMERALD_HOE = new ToolHoe(MaterialHandler.TOOLS.IMPROVED_EMERALD, "improved_emerald_hoe");
-	public static ToolHoe IMPROVED_OBSIDIAN_HOE = new ToolHoe(MaterialHandler.TOOLS.IMPROVED_OBSIDIAN, "improved_obsidian_hoe");
-	public static ToolHoe IMPROVED_GLOWSTONE_HOE = new ToolHoe(MaterialHandler.TOOLS.IMPROVED_GLOWSTONE, "improved_glowstone_hoe");
-	public static ToolHoe WITHER_HOE = new ToolHoe(MaterialHandler.TOOLS.WITHER, "wither_hoe");
-	public static ToolHoe DRAGON_HOE = new ToolHoe(MaterialHandler.TOOLS.DRAGON, "dragon_hoe");
-	public static ToolPickaxe COPPER_PICKAXE = new ToolPickaxe(MaterialHandler.TOOLS.COPPER, "copper_pickaxe");
-	public static ToolPickaxe BRONZE_PICKAXE = new ToolPickaxe(MaterialHandler.TOOLS.BRONZE, "bronze_pickaxe");
-	public static ToolPickaxe EMERALD_PICKAXE = new ToolPickaxe(MaterialHandler.TOOLS.EMERALD, "emerald_pickaxe");
-	public static ToolPickaxe OBSIDIAN_PICKAXE = new ToolPickaxe(MaterialHandler.TOOLS.OBSIDIAN, "obsidian_pickaxe");
-	public static ToolPickaxe GLOWSTONE_PICKAXE = new ToolPickaxe(MaterialHandler.TOOLS.GLOWSTONE, "glowstone_pickaxe");
-	public static ToolPickaxe PRISMARINE_PICKAXE = new ToolPickaxe(MaterialHandler.TOOLS.PRISMARINE, "prismarine_pickaxe");
-	public static ToolPickaxe IMPROVED_DIAMOND_PICKAXE = new ToolPickaxe(MaterialHandler.TOOLS.IMPROVED_DIAMOND, "improved_diamond_pickaxe");
-	public static ToolPickaxe IMPROVED_EMERALD_PICKAXE = new ToolPickaxe(MaterialHandler.TOOLS.IMPROVED_EMERALD, "improved_emerald_pickaxe");
-	public static ToolPickaxe IMPROVED_OBSIDIAN_PICKAXE = new ToolPickaxe(MaterialHandler.TOOLS.IMPROVED_OBSIDIAN, "improved_obsidian_pickaxe");
-	public static ToolPickaxe IMPROVED_GLOWSTONE_PICKAXE = new ToolPickaxe(MaterialHandler.TOOLS.IMPROVED_GLOWSTONE, "improved_glowstone_pickaxe");
-	public static ToolPickaxe WITHER_PICKAXE = new ToolPickaxe(MaterialHandler.TOOLS.WITHER, "wither_pickaxe");
-	public static ToolPickaxe DRAGON_PICKAXE = new ToolPickaxe(MaterialHandler.TOOLS.DRAGON, "dragon_pickaxe");
-	public static ToolShovel COPPER_SHOVEL = new ToolShovel(MaterialHandler.TOOLS.COPPER, "copper_shovel");
-	public static ToolShovel BRONZE_SHOVEL = new ToolShovel(MaterialHandler.TOOLS.BRONZE, "bronze_shovel");
-	public static ToolShovel EMERALD_SHOVEL = new ToolShovel(MaterialHandler.TOOLS.EMERALD, "emerald_shovel");
-	public static ToolShovel OBSIDIAN_SHOVEL = new ToolShovel(MaterialHandler.TOOLS.OBSIDIAN, "obsidian_shovel");
-	public static ToolShovel GLOWSTONE_SHOVEL = new ToolShovel(MaterialHandler.TOOLS.GLOWSTONE, "glowstone_shovel");
-	public static ToolShovel PRISMARINE_SHOVEL = new ToolShovel(MaterialHandler.TOOLS.PRISMARINE, "prismarine_shovel");
-	public static ToolShovel IMPROVED_DIAMOND_SHOVEL = new ToolShovel(MaterialHandler.TOOLS.IMPROVED_DIAMOND, "improved_diamond_shovel");
-	public static ToolShovel IMPROVED_EMERALD_SHOVEL = new ToolShovel(MaterialHandler.TOOLS.IMPROVED_EMERALD, "improved_emerald_shovel");
-	public static ToolShovel IMPROVED_OBSIDIAN_SHOVEL = new ToolShovel(MaterialHandler.TOOLS.IMPROVED_OBSIDIAN, "improved_obsidian_shovel");
-	public static ToolShovel IMPROVED_GLOWSTONE_SHOVEL = new ToolShovel(MaterialHandler.TOOLS.IMPROVED_GLOWSTONE, "improved_glowstone_shovel");
-	public static ToolShovel WITHER_SHOVEL = new ToolShovel(MaterialHandler.TOOLS.WITHER, "wither_shovel");
-	public static ToolShovel DRAGON_SHOVEL = new ToolShovel(MaterialHandler.TOOLS.DRAGON, "dragon_shovel");
-	public static ToolSword COPPER_SWORD = new ToolSword(MaterialHandler.TOOLS.COPPER, "copper_sword");
-	public static ToolSword BRONZE_SWORD = new ToolSword(MaterialHandler.TOOLS.BRONZE, "bronze_sword");
-	public static ToolSword EMERALD_SWORD = new ToolSword(MaterialHandler.TOOLS.EMERALD, "emerald_sword");
-	public static ToolSword OBSIDIAN_SWORD = new ToolSword(MaterialHandler.TOOLS.OBSIDIAN, "obsidian_sword");
-	public static ToolSword GLOWSTONE_SWORD = new ToolSword(MaterialHandler.TOOLS.GLOWSTONE, "glowstone_sword");
-	public static ToolSword PRISMARINE_SWORD = new ToolSword(MaterialHandler.TOOLS.PRISMARINE, "prismarine_sword");
-	public static ToolSword IMPROVED_DIAMOND_SWORD = new ToolSword(MaterialHandler.TOOLS.IMPROVED_DIAMOND, "improved_diamond_sword");
-	public static ToolSword IMPROVED_EMERALD_SWORD = new ToolSword(MaterialHandler.TOOLS.IMPROVED_EMERALD, "improved_emerald_sword");
-	public static ToolSword IMPROVED_OBSIDIAN_SWORD = new ToolSword(MaterialHandler.TOOLS.IMPROVED_OBSIDIAN, "improved_obsidian_sword");
-	public static ToolSword IMPROVED_GLOWSTONE_SWORD = new ToolSword(MaterialHandler.TOOLS.IMPROVED_GLOWSTONE, "improved_glowstone_sword");
-	public static ToolSword WITHER_SWORD = new ToolSword(MaterialHandler.TOOLS.WITHER, "wither_sword");
-	public static ToolSword DRAGON_SWORD = new ToolSword(MaterialHandler.TOOLS.DRAGON, "dragon_sword");
-	public static ToolForgeHammer FORGE_HAMMER = new ToolForgeHammer(256);
-	public static ItemDragonBoots DRAGON_BOOTS = new ItemDragonBoots("dragon_boots", MaterialHandler.ARMOR.DRAGON, 0, EntityEquipmentSlot.FEET);
-	public static ItemDragonChest DRAGON_CHEST = new ItemDragonChest("dragon_chest", MaterialHandler.ARMOR.DRAGON, 0, EntityEquipmentSlot.CHEST);
-	public static ItemDragonLeggs DRAGON_LEGGS = new ItemDragonLeggs("dragon_leggs", MaterialHandler.ARMOR.DRAGON, 0, EntityEquipmentSlot.LEGS);
-	public static ItemDragonHelmet DRAGON_HELMET = new ItemDragonHelmet("dragon_helmet", MaterialHandler.ARMOR.DRAGON, 0, EntityEquipmentSlot.HEAD);
-	public static ItemEmeraldBoots EMERALD_BOOTS = new ItemEmeraldBoots("emerald_boots", MaterialHandler.ARMOR.EMERALD, 0, EntityEquipmentSlot.FEET);
-	public static ItemEmeraldChest EMERALD_CHEST = new ItemEmeraldChest("emerald_chest", MaterialHandler.ARMOR.EMERALD, 0, EntityEquipmentSlot.CHEST);
-	public static ItemEmeraldLeggs EMERALD_LEGGS = new ItemEmeraldLeggs("emerald_leggs", MaterialHandler.ARMOR.EMERALD, 0, EntityEquipmentSlot.LEGS);
-	public static ItemEmeraldHelmet EMERALD_HELMET = new ItemEmeraldHelmet("emerald_helmet", MaterialHandler.ARMOR.EMERALD, 0, EntityEquipmentSlot.HEAD);
-	public static ItemObsidianBoots OBSIDIAN_BOOTS = new ItemObsidianBoots("obsidian_boots", MaterialHandler.ARMOR.OBSIDIAN, 0, EntityEquipmentSlot.FEET);
-	public static ItemObsidianChest OBSIDIAN_CHEST = new ItemObsidianChest("obsidian_chest", MaterialHandler.ARMOR.OBSIDIAN, 0, EntityEquipmentSlot.CHEST);
-	public static ItemObsidianLeggs OBSIDIAN_LEGGS = new ItemObsidianLeggs("obsidian_leggs", MaterialHandler.ARMOR.OBSIDIAN, 0, EntityEquipmentSlot.LEGS);
-	public static ItemObsidianHelmet OBSIDIAN_HELMET = new ItemObsidianHelmet("obsidian_helmet", MaterialHandler.ARMOR.OBSIDIAN, 0, EntityEquipmentSlot.HEAD);
-	public static ItemIMObsidianBoots IMOBSIDIAN_BOOTS = new ItemIMObsidianBoots("imobsidian_boots", MaterialHandler.ARMOR.IMPROVED_OBSIDIAN, 0, EntityEquipmentSlot.FEET);
-	public static ItemIMObsidianChest IMOBSIDIAN_CHEST = new ItemIMObsidianChest("imobsidian_chest", MaterialHandler.ARMOR.IMPROVED_OBSIDIAN, 0, EntityEquipmentSlot.CHEST);
-	public static ItemIMObsidianLeggs IMOBSIDIAN_LEGGS = new ItemIMObsidianLeggs("imobsidian_leggs", MaterialHandler.ARMOR.IMPROVED_OBSIDIAN, 0, EntityEquipmentSlot.LEGS);
-	public static ItemIMObsidianHelmet IMOBSIDIAN_HELMET = new ItemIMObsidianHelmet("imobsidian_helmet", MaterialHandler.ARMOR.IMPROVED_OBSIDIAN, 0, EntityEquipmentSlot.HEAD);
-	public static ItemIMDiamondBoots IMDIAMOND_BOOTS = new ItemIMDiamondBoots("imdiamond_boots", MaterialHandler.ARMOR.IMPROVED_DIAMOND, 0, EntityEquipmentSlot.FEET);
-	public static ItemIMDiamondChest IMDIAMOND_CHEST = new ItemIMDiamondChest("imdiamond_chest", MaterialHandler.ARMOR.IMPROVED_DIAMOND, 0, EntityEquipmentSlot.CHEST);
-	public static ItemIMDiamondLeggs IMDIAMOND_LEGGS = new ItemIMDiamondLeggs("imdiamond_leggs", MaterialHandler.ARMOR.IMPROVED_DIAMOND, 0, EntityEquipmentSlot.LEGS);
-	public static ItemIMDiamondHelmet IMDIAMOND_HELMET = new ItemIMDiamondHelmet("imdiamond_helmet", MaterialHandler.ARMOR.IMPROVED_DIAMOND, 0, EntityEquipmentSlot.HEAD);
-	public static ItemIMEmeraldBoots IMEMERALD_BOOTS = new ItemIMEmeraldBoots("imemerald_boots", MaterialHandler.ARMOR.IMPROVED_EMERALD, 0, EntityEquipmentSlot.FEET);
-	public static ItemIMEmeraldChest IMEMERALD_CHEST = new ItemIMEmeraldChest("imemerald_chest", MaterialHandler.ARMOR.IMPROVED_EMERALD, 0, EntityEquipmentSlot.CHEST);
-	public static ItemIMEmeraldLeggs IMEMERALD_LEGGS = new ItemIMEmeraldLeggs("imemerald_leggs", MaterialHandler.ARMOR.IMPROVED_EMERALD, 0, EntityEquipmentSlot.LEGS);
-	public static ItemIMEmeraldHelmet IMEMERALD_HELMET = new ItemIMEmeraldHelmet("imemerald_helmet", MaterialHandler.ARMOR.IMPROVED_EMERALD, 0, EntityEquipmentSlot.HEAD);
-	public static ItemWitherBoots WITHER_BOOTS = new ItemWitherBoots("wither_boots", MaterialHandler.ARMOR.WITHER, 0, EntityEquipmentSlot.FEET);
-	public static ItemWitherChest WITHER_CHEST = new ItemWitherChest("wither_chest", MaterialHandler.ARMOR.WITHER, 0, EntityEquipmentSlot.CHEST);
-	public static ItemWitherLeggs WITHER_LEGGS = new ItemWitherLeggs("wither_leggs", MaterialHandler.ARMOR.WITHER, 0, EntityEquipmentSlot.LEGS);
-	public static ItemWitherHelmet WITHER_HELMET = new ItemWitherHelmet("wither_helmet", MaterialHandler.ARMOR.WITHER, 0, EntityEquipmentSlot.HEAD);
-	public static Item TESLA_HELMET = (Item) new ItemTeslaChargedArmor(ItemArmor.ArmorMaterial.DIAMOND, EntityEquipmentSlot.HEAD, 150000L, 200L, 200L).setRegistryName("charged.helmet");
-	public static Item TESLA_CHEST = (Item) new ItemTeslaChargedArmor(ItemArmor.ArmorMaterial.DIAMOND, EntityEquipmentSlot.CHEST, 150000L, 200L, 200L).setRegistryName("charged.chest");
-	public static Item TESLA_LEGGS = (Item) new ItemTeslaChargedArmor(ItemArmor.ArmorMaterial.DIAMOND, EntityEquipmentSlot.LEGS, 150000L, 200L, 200L).setRegistryName("charged.leggs");
-	public static Item TESLA_BOOTS = (Item) new ItemTeslaChargedArmor(ItemArmor.ArmorMaterial.DIAMOND, EntityEquipmentSlot.FEET, 150000L, 200L, 200L).setRegistryName("charged.feet");
+	
+	//Materials
+	public static Item INGOT, NUGGET, PLATE, DRAGON_CLAW, DRAGON_SCALE, WITHER_BONE, SOLAR_PANEL_SCREEN, EXPERIENCE_PEARL;
+	
+	//Tools
+	public static Item COPPER_AXE, BRONZE_AXE, EMERALD_AXE, OBSIDIAN_AXE, GLOWSTONE_AXE,PRISMARINE_AXE,IMPROVED_DIAMOND_AXE,IMPROVED_EMERALD_AXE,IMPROVED_OBSIDIAN_AXE,IMPROVED_GLOWSTONE_AXE, WITHER_AXE, DRAGON_AXE;
+
+	public static Item COPPER_HOE, BRONZE_HOE, EMERALD_HOE, OBSIDIAN_HOE, GLOWSTONE_HOE, PRISMARINE_HOE, IMPROVED_DIAMOND_HOE, IMPROVED_EMERALD_HOE, IMPROVED_OBSIDIAN_HOE, IMPROVED_GLOWSTONE_HOE, WITHER_HOE, DRAGON_HOE;
+
+	public static Item COPPER_PICKAXE, BRONZE_PICKAXE, EMERALD_PICKAXE, OBSIDIAN_PICKAXE, GLOWSTONE_PICKAXE, PRISMARINE_PICKAXE, IMPROVED_DIAMOND_PICKAXE, IMPROVED_EMERALD_PICKAXE, IMPROVED_OBSIDIAN_PICKAXE, IMPROVED_GLOWSTONE_PICKAXE, WITHER_PICKAXE, DRAGON_PICKAXE;
+
+	public static Item COPPER_SHOVEL, BRONZE_SHOVEL, EMERALD_SHOVEL, OBSIDIAN_SHOVEL, GLOWSTONE_SHOVEL, PRISMARINE_SHOVEL, IMPROVED_DIAMOND_SHOVEL, IMPROVED_EMERALD_SHOVEL, IMPROVED_OBSIDIAN_SHOVEL, IMPROVED_GLOWSTONE_SHOVEL, WITHER_SHOVEL, DRAGON_SHOVEL;
+
+	public static Item COPPER_SWORD, BRONZE_SWORD, EMERALD_SWORD, OBSIDIAN_SWORD, GLOWSTONE_SWORD, PRISMARINE_SWORD, IMPROVED_DIAMOND_SWORD, IMPROVED_EMERALD_SWORD, IMPROVED_OBSIDIAN_SWORD, IMPROVED_GLOWSTONE_SWORD, WITHER_SWORD, DRAGON_SWORD;
+
+	public static Item FORGE_HAMMER, ANTI_MATERIALIZER, BATTERY_2K, BATTERY_8K, BATTERY_32K, BATTERY_128K, BATTERY_512K, BATTERY_2M;
+	
+	//Armor
+	public static Item DRAGON_BOOTS, DRAGON_CHEST, DRAGON_LEGGS, DRAGON_HELMET;
+	
+	public static Item EMERALD_BOOTS, EMERALD_CHEST, EMERALD_LEGGS, EMERALD_HELMET;
+
+	public static Item OBSIDIAN_BOOTS, OBSIDIAN_CHEST, OBSIDIAN_LEGGS, OBSIDIAN_HELMET;
+
+	public static Item IMOBSIDIAN_BOOTS, IMOBSIDIAN_CHEST, IMOBSIDIAN_LEGGS, IMOBSIDIAN_HELMET;
+
+	public static Item IMDIAMOND_BOOTS, IMDIAMOND_CHEST, IMDIAMOND_LEGGS, IMDIAMOND_HELMET;
+
+	public static Item IMEMERALD_BOOTS, IMEMERALD_CHEST, IMEMERALD_LEGGS,IMEMERALD_HELMET;
+
+	public static Item WITHER_BOOTS, WITHER_CHEST, WITHER_LEGGS, WITHER_HELMET;
+
+	public static Item TESLA_HELMET, TESLA_CHEST, TESLA_LEGGS, TESLA_BOOTS, TESLA_JET_CHEST;
+	
+	//Tools
 	
 	public static void init(){
+		INGOT = new ItemIngot();
+		NUGGET = new ItemNugget();
+		PLATE = new ItemPlate();
+		DRAGON_CLAW = new ItemMaterial("dragon_claw");
+		DRAGON_SCALE = new ItemMaterial("dragon_scale");
+		WITHER_BONE = new ItemMaterial("wither_bone");
+		SOLAR_PANEL_SCREEN = new ItemMaterial("solar_panel_screen");
+		EXPERIENCE_PEARL = new ItemExperiencePearl("experience_orb");
+		
+		COPPER_AXE = new ToolAxe(MaterialHandler.TOOLS.COPPER, "copper_axe");
+		BRONZE_AXE = new ToolAxe(MaterialHandler.TOOLS.BRONZE, "bronze_axe");
+		EMERALD_AXE = new ToolAxe(MaterialHandler.TOOLS.EMERALD, "emerald_axe");
+		OBSIDIAN_AXE = new ToolAxe(MaterialHandler.TOOLS.OBSIDIAN, "obsidian_axe");
+		GLOWSTONE_AXE = new ToolAxe(MaterialHandler.TOOLS.GLOWSTONE, "glowstone_axe");
+		PRISMARINE_AXE = new ToolAxe(MaterialHandler.TOOLS.PRISMARINE, "prismarine_axe");
+		IMPROVED_DIAMOND_AXE = new ToolAxe(MaterialHandler.TOOLS.IMPROVED_DIAMOND, "improved_diamond_axe");
+		IMPROVED_EMERALD_AXE = new ToolAxe(MaterialHandler.TOOLS.IMPROVED_EMERALD, "improved_emerald_axe");
+		IMPROVED_OBSIDIAN_AXE = new ToolAxe(MaterialHandler.TOOLS.IMPROVED_OBSIDIAN, "improved_obsidian_axe");
+		IMPROVED_GLOWSTONE_AXE = new ToolAxe(MaterialHandler.TOOLS.IMPROVED_GLOWSTONE, "improved_glowstone_axe");
+		WITHER_AXE = new ToolAxe(MaterialHandler.TOOLS.WITHER, "wither_axe");
+		DRAGON_AXE = new ToolAxe(MaterialHandler.TOOLS.DRAGON, "dragon_axe");
+		
+		COPPER_HOE = new ToolHoe(MaterialHandler.TOOLS.COPPER, "copper_hoe");
+		BRONZE_HOE = new ToolHoe(MaterialHandler.TOOLS.BRONZE, "bronze_hoe");
+		EMERALD_HOE = new ToolHoe(MaterialHandler.TOOLS.EMERALD, "emerald_hoe");
+		OBSIDIAN_HOE = new ToolHoe(MaterialHandler.TOOLS.OBSIDIAN, "obsidian_hoe");
+		GLOWSTONE_HOE = new ToolHoe(MaterialHandler.TOOLS.GLOWSTONE, "glowstone_hoe");
+		PRISMARINE_HOE = new ToolHoe(MaterialHandler.TOOLS.PRISMARINE, "prismarine_hoe");
+		IMPROVED_DIAMOND_HOE = new ToolHoe(MaterialHandler.TOOLS.IMPROVED_DIAMOND, "improved_diamond_hoe");
+		IMPROVED_EMERALD_HOE = new ToolHoe(MaterialHandler.TOOLS.IMPROVED_EMERALD, "improved_emerald_hoe");
+		IMPROVED_OBSIDIAN_HOE = new ToolHoe(MaterialHandler.TOOLS.IMPROVED_OBSIDIAN, "improved_obsidian_hoe");
+		IMPROVED_GLOWSTONE_HOE = new ToolHoe(MaterialHandler.TOOLS.IMPROVED_GLOWSTONE, "improved_glowstone_hoe");
+		WITHER_HOE = new ToolHoe(MaterialHandler.TOOLS.WITHER, "wither_hoe");
+		DRAGON_HOE = new ToolHoe(MaterialHandler.TOOLS.DRAGON, "dragon_hoe");
+		
+		COPPER_PICKAXE = new ToolPickaxe(MaterialHandler.TOOLS.COPPER, "copper_pickaxe");
+		BRONZE_PICKAXE = new ToolPickaxe(MaterialHandler.TOOLS.BRONZE, "bronze_pickaxe");
+		EMERALD_PICKAXE = new ToolPickaxe(MaterialHandler.TOOLS.EMERALD, "emerald_pickaxe");
+		OBSIDIAN_PICKAXE = new ToolPickaxe(MaterialHandler.TOOLS.OBSIDIAN, "obsidian_pickaxe");
+		GLOWSTONE_PICKAXE = new ToolPickaxe(MaterialHandler.TOOLS.GLOWSTONE, "glowstone_pickaxe");
+		PRISMARINE_PICKAXE = new ToolPickaxe(MaterialHandler.TOOLS.PRISMARINE, "prismarine_pickaxe");
+		IMPROVED_DIAMOND_PICKAXE = new ToolPickaxe(MaterialHandler.TOOLS.IMPROVED_DIAMOND, "improved_diamond_pickaxe");
+		IMPROVED_EMERALD_PICKAXE = new ToolPickaxe(MaterialHandler.TOOLS.IMPROVED_EMERALD, "improved_emerald_pickaxe");
+		IMPROVED_OBSIDIAN_PICKAXE = new ToolPickaxe(MaterialHandler.TOOLS.IMPROVED_OBSIDIAN, "improved_obsidian_pickaxe");
+		IMPROVED_GLOWSTONE_PICKAXE = new ToolPickaxe(MaterialHandler.TOOLS.IMPROVED_GLOWSTONE, "improved_glowstone_pickaxe");
+		WITHER_PICKAXE = new ToolPickaxe(MaterialHandler.TOOLS.WITHER, "wither_pickaxe");
+		DRAGON_PICKAXE = new ToolPickaxe(MaterialHandler.TOOLS.DRAGON, "dragon_pickaxe");
+		
+		COPPER_SHOVEL = new ToolShovel(MaterialHandler.TOOLS.COPPER, "copper_shovel");
+		BRONZE_SHOVEL = new ToolShovel(MaterialHandler.TOOLS.BRONZE, "bronze_shovel");
+		EMERALD_SHOVEL = new ToolShovel(MaterialHandler.TOOLS.EMERALD, "emerald_shovel");
+		OBSIDIAN_SHOVEL = new ToolShovel(MaterialHandler.TOOLS.OBSIDIAN, "obsidian_shovel");
+		GLOWSTONE_SHOVEL = new ToolShovel(MaterialHandler.TOOLS.GLOWSTONE, "glowstone_shovel");
+		PRISMARINE_SHOVEL = new ToolShovel(MaterialHandler.TOOLS.PRISMARINE, "prismarine_shovel");
+		IMPROVED_DIAMOND_SHOVEL = new ToolShovel(MaterialHandler.TOOLS.IMPROVED_DIAMOND, "improved_diamond_shovel");
+		IMPROVED_EMERALD_SHOVEL = new ToolShovel(MaterialHandler.TOOLS.IMPROVED_EMERALD, "improved_emerald_shovel");
+		IMPROVED_OBSIDIAN_SHOVEL = new ToolShovel(MaterialHandler.TOOLS.IMPROVED_OBSIDIAN, "improved_obsidian_shovel");
+		IMPROVED_GLOWSTONE_SHOVEL = new ToolShovel(MaterialHandler.TOOLS.IMPROVED_GLOWSTONE, "improved_glowstone_shovel");
+		WITHER_SHOVEL = new ToolShovel(MaterialHandler.TOOLS.WITHER, "wither_shovel");
+		DRAGON_SHOVEL = new ToolShovel(MaterialHandler.TOOLS.DRAGON, "dragon_shovel");
+		
+		COPPER_SWORD = new ToolSword(MaterialHandler.TOOLS.COPPER, "copper_sword");
+		BRONZE_SWORD = new ToolSword(MaterialHandler.TOOLS.BRONZE, "bronze_sword");
+		EMERALD_SWORD = new ToolSword(MaterialHandler.TOOLS.EMERALD, "emerald_sword");
+		OBSIDIAN_SWORD = new ToolSword(MaterialHandler.TOOLS.OBSIDIAN, "obsidian_sword");
+		GLOWSTONE_SWORD = new ToolSword(MaterialHandler.TOOLS.GLOWSTONE, "glowstone_sword");
+		PRISMARINE_SWORD = new ToolSword(MaterialHandler.TOOLS.PRISMARINE, "prismarine_sword");
+		IMPROVED_DIAMOND_SWORD = new ToolSword(MaterialHandler.TOOLS.IMPROVED_DIAMOND, "improved_diamond_sword");
+		IMPROVED_EMERALD_SWORD = new ToolSword(MaterialHandler.TOOLS.IMPROVED_EMERALD, "improved_emerald_sword");
+		IMPROVED_OBSIDIAN_SWORD = new ToolSword(MaterialHandler.TOOLS.IMPROVED_OBSIDIAN, "improved_obsidian_sword");
+		IMPROVED_GLOWSTONE_SWORD = new ToolSword(MaterialHandler.TOOLS.IMPROVED_GLOWSTONE, "improved_glowstone_sword");
+		WITHER_SWORD = new ToolSword(MaterialHandler.TOOLS.WITHER, "wither_sword");
+		DRAGON_SWORD = new ToolSword(MaterialHandler.TOOLS.DRAGON, "dragon_sword");
+		
+		FORGE_HAMMER = new ToolForgeHammer(256);
+		
+		ANTI_MATERIALIZER = new ToolChargedAntiMaterializer(40000, 120, 20, "antiMaterializer", "ItemAntiMaterializer");
+		BATTERY_2K = new ItemBattery(2000, 50, "battery2k", "ItemBattery2K");
+		BATTERY_8K = new ItemBattery(8000, 200, "battery8K", "ItemBattery8K");
+		BATTERY_32K = new ItemBattery(32000, 800, "battery32k", "ItemBattery32K");
+		BATTERY_128K = new ItemBattery(128000, 3200, "battery128k", "ItemBattery128K");
+		BATTERY_512K = new ItemBattery(512000, 12800, "battery512k", "ItemBattery512K");
+		BATTERY_2M = new ItemBattery(2048000, 51200, "battery2M", "ItemBattery2M");
+		
+		DRAGON_BOOTS = new ItemDragonBoots("dragon_boots", MaterialHandler.ARMOR.DRAGON, 0, EntityEquipmentSlot.FEET);
+		DRAGON_CHEST = new ItemDragonChest("dragon_chest", MaterialHandler.ARMOR.DRAGON, 0, EntityEquipmentSlot.CHEST);
+		DRAGON_LEGGS = new ItemDragonLeggs("dragon_leggs", MaterialHandler.ARMOR.DRAGON, 0, EntityEquipmentSlot.LEGS);
+		DRAGON_HELMET = new ItemDragonHelmet("dragon_helmet", MaterialHandler.ARMOR.DRAGON, 0, EntityEquipmentSlot.HEAD);
+		EMERALD_BOOTS = new ItemEmeraldBoots("emerald_boots", MaterialHandler.ARMOR.EMERALD, 0, EntityEquipmentSlot.FEET);
+		EMERALD_CHEST = new ItemEmeraldChest("emerald_chest", MaterialHandler.ARMOR.EMERALD, 0, EntityEquipmentSlot.CHEST);
+		EMERALD_LEGGS = new ItemEmeraldLeggs("emerald_leggs", MaterialHandler.ARMOR.EMERALD, 0, EntityEquipmentSlot.LEGS);
+		EMERALD_HELMET = new ItemEmeraldHelmet("emerald_helmet", MaterialHandler.ARMOR.EMERALD, 0, EntityEquipmentSlot.HEAD);
+		OBSIDIAN_BOOTS = new ItemObsidianBoots("obsidian_boots", MaterialHandler.ARMOR.OBSIDIAN, 0, EntityEquipmentSlot.FEET);
+		OBSIDIAN_CHEST = new ItemObsidianChest("obsidian_chest", MaterialHandler.ARMOR.OBSIDIAN, 0, EntityEquipmentSlot.CHEST);
+		OBSIDIAN_LEGGS = new ItemObsidianLeggs("obsidian_leggs", MaterialHandler.ARMOR.OBSIDIAN, 0, EntityEquipmentSlot.LEGS);
+		OBSIDIAN_HELMET = new ItemObsidianHelmet("obsidian_helmet", MaterialHandler.ARMOR.OBSIDIAN, 0, EntityEquipmentSlot.HEAD);
+		IMOBSIDIAN_BOOTS = new ItemIMObsidianBoots("imobsidian_boots", MaterialHandler.ARMOR.IMPROVED_OBSIDIAN, 0, EntityEquipmentSlot.FEET);
+		IMOBSIDIAN_CHEST = new ItemIMObsidianChest("imobsidian_chest", MaterialHandler.ARMOR.IMPROVED_OBSIDIAN, 0, EntityEquipmentSlot.CHEST);
+		IMOBSIDIAN_LEGGS = new ItemIMObsidianLeggs("imobsidian_leggs", MaterialHandler.ARMOR.IMPROVED_OBSIDIAN, 0, EntityEquipmentSlot.LEGS);
+		IMOBSIDIAN_HELMET = new ItemIMObsidianHelmet("imobsidian_helmet", MaterialHandler.ARMOR.IMPROVED_OBSIDIAN, 0, EntityEquipmentSlot.HEAD);
+		IMDIAMOND_BOOTS = new ItemIMDiamondBoots("imdiamond_boots", MaterialHandler.ARMOR.IMPROVED_DIAMOND, 0, EntityEquipmentSlot.FEET);
+		IMDIAMOND_CHEST = new ItemIMDiamondChest("imdiamond_chest", MaterialHandler.ARMOR.IMPROVED_DIAMOND, 0, EntityEquipmentSlot.CHEST);
+		IMDIAMOND_LEGGS = new ItemIMDiamondLeggs("imdiamond_leggs", MaterialHandler.ARMOR.IMPROVED_DIAMOND, 0, EntityEquipmentSlot.LEGS);
+		IMDIAMOND_HELMET = new ItemIMDiamondHelmet("imdiamond_helmet", MaterialHandler.ARMOR.IMPROVED_DIAMOND, 0, EntityEquipmentSlot.HEAD);
+		IMEMERALD_BOOTS = new ItemIMEmeraldBoots("imemerald_boots", MaterialHandler.ARMOR.IMPROVED_EMERALD, 0, EntityEquipmentSlot.FEET);
+		IMEMERALD_CHEST = new ItemIMEmeraldChest("imemerald_chest", MaterialHandler.ARMOR.IMPROVED_EMERALD, 0, EntityEquipmentSlot.CHEST);
+		IMEMERALD_LEGGS = new ItemIMEmeraldLeggs("imemerald_leggs", MaterialHandler.ARMOR.IMPROVED_EMERALD, 0, EntityEquipmentSlot.LEGS);
+		IMEMERALD_HELMET = new ItemIMEmeraldHelmet("imemerald_helmet", MaterialHandler.ARMOR.IMPROVED_EMERALD, 0, EntityEquipmentSlot.HEAD);
+		WITHER_BOOTS = new ItemWitherBoots("wither_boots", MaterialHandler.ARMOR.WITHER, 0, EntityEquipmentSlot.FEET);
+		WITHER_CHEST = new ItemWitherChest("wither_chest", MaterialHandler.ARMOR.WITHER, 0, EntityEquipmentSlot.CHEST);
+		WITHER_LEGGS = new ItemWitherLeggs("wither_leggs", MaterialHandler.ARMOR.WITHER, 0, EntityEquipmentSlot.LEGS);
+		WITHER_HELMET = new ItemWitherHelmet("wither_helmet", MaterialHandler.ARMOR.WITHER, 0, EntityEquipmentSlot.HEAD);
+		TESLA_HELMET = new ItemTeslaChargedArmor("charged_helmet", "ItemChargedHelmet", MaterialHandler.ARMOR.CHARGED, 1, EntityEquipmentSlot.HEAD);
+		TESLA_CHEST = new ItemTeslaChargedArmor("charged_chest", "ItemChargedChest", MaterialHandler.ARMOR.CHARGED, 1, EntityEquipmentSlot.CHEST);
+		TESLA_LEGGS = new ItemTeslaChargedArmor("charged_leggs", "ItemChargedLeggs", MaterialHandler.ARMOR.CHARGED, 2, EntityEquipmentSlot.LEGS);
+		TESLA_BOOTS = new ItemTeslaChargedArmor("charged_boots", "ItemChargedBoots", MaterialHandler.ARMOR.CHARGED, 1, EntityEquipmentSlot.FEET);
+		TESLA_JET_CHEST = new ItemTeslaChargedArmor("charged_jet_chest", "ItemChargedJetChest", MaterialHandler.ARMOR.CHARGED, 1, EntityEquipmentSlot.CHEST);
+		
+		reg();
+		
+	}
+	
+	public static void reg(){
 		
 		ITEMS.add(INGOT);
 		ITEMS.add(NUGGET);
@@ -165,7 +224,15 @@ public class IMItems {
 		ITEMS.add(WITHER_BONE);
 		//ITEMS.add(SOLAR_PANEL_SCREEN);
 		ITEMS.add(EXPERIENCE_PEARL);
+		
 		ITEMS.add(FORGE_HAMMER);
+		ITEMS.add(ANTI_MATERIALIZER);
+		ITEMS.add(BATTERY_2K);
+		ITEMS.add(BATTERY_8K);
+		ITEMS.add(BATTERY_32K);
+		ITEMS.add(BATTERY_128K);
+		ITEMS.add(BATTERY_512K);
+		ITEMS.add(BATTERY_2M);
 		
 		if(ConfigValues.copperTools){
 			ITEMS.add(COPPER_AXE);
@@ -282,12 +349,15 @@ public class IMItems {
 		ITEMS.add(DRAGON_BOOTS);
 		ITEMS.add(TESLA_HELMET);
 		ITEMS.add(TESLA_CHEST);
+		ITEMS.add(TESLA_JET_CHEST);
 		ITEMS.add(TESLA_LEGGS);
 		ITEMS.add(TESLA_BOOTS);
+		
 		
 		for (Item item : ITEMS){
 			GameRegistry.register(item);
 		}
 		
 	}
+	
 }

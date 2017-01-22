@@ -2,6 +2,7 @@ package de.improvedmetals.common.handler;
 
 import de.improvedmetals.ImprovedMetals;
 import de.improvedmetals.common.config.ConfigValues;
+import net.minecraft.block.BlockStairs.EnumHalf;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
@@ -24,6 +25,8 @@ public class MaterialHandler {
 		public static final ToolMaterial WITHER = EnumHelper.addToolMaterial("Wither", 3, ConfigValues.witherToolsDurability, 23F, 11F, 30);
 		public static final ToolMaterial DRAGON = EnumHelper.addToolMaterial("Dragon", 3, -1, 25F, 15F, 30);
 		
+		public static final ToolMaterial ANTI_MATERIALIZER = EnumHelper.addToolMaterial("ANTI_MATERIALIZER", 3, 20000, 30.0F, 5F, 25);
+		
 	}
 	
 	public static final class ARMOR{
@@ -35,6 +38,8 @@ public class MaterialHandler {
 		public static final ArmorMaterial IMPROVED_OBSIDIAN = EnumHelper.addArmorMaterial("Improved_Obsidian", ImprovedMetals.MODID + ":imobsidian", 100, new int[]{ 6, 10, 14, 6}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 5F);
 		public static final ArmorMaterial WITHER = EnumHelper.addArmorMaterial("Wither", ImprovedMetals.MODID + ":wither", 150, new int[]{ 6, 9, 12, 6}, 100, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 6.5F);
 		public static final ArmorMaterial DRAGON = EnumHelper.addArmorMaterial("Dragon", ImprovedMetals.MODID + ":dragon", -1, new int[] { 6, 10, 13, 6 }, 200, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 8.0F);
+		
+		public static final ArmorMaterial CHARGED = EnumHelper.addArmorMaterial("charged", ImprovedMetals.MODID + ":charged", 15, new int[]{3,8,6,3}, 9, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 4F);
 		
 	}
 	

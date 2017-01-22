@@ -1,4 +1,4 @@
-package de.improvedmetals.common.tiles;
+package de.improvedmetals.common.tiles.combinator;
 
 import java.util.List;
 
@@ -6,7 +6,7 @@ import com.google.common.collect.Lists;
 
 import de.improvedmetals.api.recipe.combinator.CombinatorRecipe;
 import de.improvedmetals.api.recipe.combinator.CombinatorRecipeObject;
-import de.improvedmetals.common.container.combinator.ContainerCombinatorTier3;
+import de.improvedmetals.common.container.combinator.ContainerCombinatorTier1;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
@@ -27,9 +27,9 @@ import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.world.World;
 
-public class TileCombinatorTier3 extends TileEntity implements ITickable, ISidedInventory {
+public class TileCombinatorTier1 extends TileEntity implements ITickable, ISidedInventory {
 
-	public static final float BURN_TIME_MULTI = 2.5f;
+	public static final float BURN_TIME_MULTI = 0.5f;
 
 	public static final int[] SLOTS_INPUT = { 0, 1, 2, 3 };
 	public static final int SLOT_FUEL = 4;
@@ -51,7 +51,7 @@ public class TileCombinatorTier3 extends TileEntity implements ITickable, ISided
 
 		CombinatorRecipe recipe = CombinatorRecipe.getMatchingRecipe(getInputStacks());
 		if (recipe != null) {
-			return recipe.getCookTime() / 32;
+			return recipe.getCookTime();
 		}
 		return 0;
 	}
@@ -363,7 +363,7 @@ public class TileCombinatorTier3 extends TileEntity implements ITickable, ISided
 
 	  public Container createContainer(InventoryPlayer playerInventory, EntityPlayer player) {
 
-	    return new ContainerCombinatorTier3(playerInventory, this);
+	    return new ContainerCombinatorTier1(playerInventory, this);
 	    
 	  }
 
