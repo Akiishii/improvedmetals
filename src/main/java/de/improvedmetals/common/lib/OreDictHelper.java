@@ -2,6 +2,7 @@ package de.improvedmetals.common.lib;
 
 import de.improvedmetals.IMBlocks;
 import de.improvedmetals.IMItems;
+import de.improvedmetals.common.items.material.ItemDust;
 import de.improvedmetals.common.items.material.ItemIngot;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
@@ -45,6 +46,12 @@ public class OreDictHelper {
 		OreDictionary.registerOre("materialDragonScale", IMItems.DRAGON_SCALE);
 		
 		OreDictionary.registerOre("dustGlowstone", Items.GLOWSTONE_DUST);
+		OreDictionary.registerOre("dustCopper", new ItemStack(IMItems.DUST, 1, ItemDust.DUST_COPPER));
+		OreDictionary.registerOre("dustTin", new ItemStack(IMItems.DUST, 1, ItemDust.DUST_TIN));
+		OreDictionary.registerOre("dustBronze", new ItemStack(IMItems.DUST, 1, ItemDust.DUST_BRONZE));
+		OreDictionary.registerOre("dustSilver", new ItemStack(IMItems.DUST, 1, ItemDust.DUST_SILVER));
+		OreDictionary.registerOre("dustLead", new ItemStack(IMItems.DUST, 1, ItemDust.DUST_LEAD));
+		OreDictionary.registerOre("dustPrismarine", new ItemStack(IMItems.DUST, 1, ItemDust.DUST_PRISMARINE));
 		
 	}
 	
@@ -73,13 +80,6 @@ public class OreDictHelper {
 		OreDictionary.registerOre("blockMetalImprovedGlowstone", IMBlocks.IMPROVED_GLOWSTONE_BLOCK);
 		OreDictionary.registerOre("blockMetalWither", IMBlocks.WITHER_BLOCK);
 		OreDictionary.registerOre("blockMetalDragon", IMBlocks.DRAGON_BLOCK);
-		
-		OreDictionary.registerOre("blockSolarPanelTier1", IMBlocks.SOLAR_TIER1);
-		OreDictionary.registerOre("blockSolarPanelTier2", IMBlocks.SOLAR_TIER2);
-		OreDictionary.registerOre("blockSolarPanelTier3", IMBlocks.SOLAR_TIER3);
-		OreDictionary.registerOre("blockSolarPanelTier4", IMBlocks.SOLAR_TIER4);
-		OreDictionary.registerOre("blockSolarPanelTier5", IMBlocks.SOLAR_TIER5);
-		OreDictionary.registerOre("blockSolarPanelTier6", IMBlocks.SOLAR_TIER6);
 		
 	}
 	

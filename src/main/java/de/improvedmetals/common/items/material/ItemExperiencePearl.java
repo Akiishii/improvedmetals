@@ -2,7 +2,6 @@ package de.improvedmetals.common.items.material;
 
 import de.improvedmetals.ImprovedMetals;
 import de.improvedmetals.common.items.ItemBase;
-import de.improvedmetals.common.utils.StackUtils;
 import net.minecraft.entity.item.EntityXPOrb;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
@@ -29,7 +28,7 @@ public class ItemExperiencePearl extends ItemBase{
                 }
             }
             else{
-                amount = 10 * StackUtils.getStackSize(stack);
+                amount = 10 * getStackSize(stack);
                 if(!player.capabilities.isCreativeMode){
                     stack.stackSize = 0;
                 }
@@ -42,5 +41,22 @@ public class ItemExperiencePearl extends ItemBase{
         return new ActionResult<ItemStack>(EnumActionResult.SUCCESS, stack);
 		
 	}
+
+	private static boolean isValid(ItemStack stack){
+        return stack != null && !ItemStack.areItemStacksEqual(stack, getNull()) && stack.stackSize > 0 && stack.getItem() != null;
+    }
+	
+	private static ItemStack getNull(){
+        return null;
+    }
+	
+	private static int getStackSize(ItemStack stack){
+        if(!isValid(stack)){
+            return 0;
+        }
+        else{
+            return stack.stackSize;
+        }
+    }
 	
 }

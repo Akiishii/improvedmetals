@@ -57,48 +57,7 @@ public class ConfigValues {
 	public static int oreGenPrismarineMaxY = 128;
 	public static int oreGenExperienceMaxY = 128;
 	
-	public static int tier1PanelCapacity = 25000;
-	public static int tier1PanelPowerGen = 1;
-	public static int tier1PanelTransferRate = 8;
-	
-	public static int tier2PanelCapacity = 125000;
-	public static int tier2PanelPowerGen = 8;
-	public static int tier2PanelTransferRate = 64;
-	
-	public static int tier3PanelCapacity = 425000;
-	public static int tier3PanelPowerGen = 32;
-	public static int tier3PanelTransferRate = 256;
-	
-	public static int tier4PanelCapacity = 2000000;
-	public static int tier4PanelPowerGen = 128;
-	public static int tier4PanelTransferRate = 1024;
-	
-	public static int tier5PanelCapacity = 8000000;
-	public static int tier5PanelPowerGen = 512;
-	public static int tier5PanelTransferRate = 4096;
-	
-	public static int tier6PanelCapacity = 32000000;
-	public static int tier6PanelPowerGen = 2048;
-	public static int tier6PanelTransferRate = 16384;
-	
-	public static int tier7PanelCapacity = 64000000;
-	public static int tier7PanelPowerGen = 8192;
-	public static int tier7PanelTransferRate = 64000;
-	
-	public static int tier8PanelCapacity = 128000000;
-	public static int tier8PanelPowerGen = 32768;
-	public static int tier8PanelTransferRate = 256000;
-
-	public static int tier9PanelCapacity = 512000000;
-	public static int tier9PanelPowerGen = 131072;
-	public static int tier9PanelTransferRate = 1024000;
-	
-	public static int tier10PanelCapacity = 2048000000;
-	public static int tier10PanelPowerGen = 524288;
-	public static int tier10PanelTransferRate = 4096000;
-	
 	public static int modGuiIndex = 0;
-	public static int GuiCombinator = modGuiIndex++;
 	
 	public static boolean allowFlight = true;
 	

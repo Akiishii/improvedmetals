@@ -3,6 +3,7 @@ package de.improvedmetals.common.proxy;
 import de.improvedmetals.IMBlocks;
 import de.improvedmetals.IMItems;
 import de.improvedmetals.ImprovedMetals;
+import de.improvedmetals.common.items.material.ItemDust;
 import de.improvedmetals.common.items.material.ItemIngot;
 import de.improvedmetals.common.items.material.ItemNugget;
 import de.improvedmetals.common.items.material.ItemPlate;
@@ -81,6 +82,18 @@ public class ClientProxy extends CommonProxy{
 		
 		);
 		
+		ModelBakery.registerItemVariants(IMItems.DUST, 
+				new ResourceLocation(ImprovedMetals.MODID + ":dust_copper"),
+				new ResourceLocation(ImprovedMetals.MODID + ":dust_tin"),
+				new ResourceLocation(ImprovedMetals.MODID + ":dust_bronze"),
+				new ResourceLocation(ImprovedMetals.MODID + ":dust_silver"),
+				new ResourceLocation(ImprovedMetals.MODID + ":dust_lead"),
+				new ResourceLocation(ImprovedMetals.MODID + ":dust_prismarine"),
+				new ResourceLocation(ImprovedMetals.MODID + ":dust_wither"),
+				new ResourceLocation(ImprovedMetals.MODID + ":dust_dragon")
+		
+		);
+		
 		ModelLoader.setCustomModelResourceLocation(IMItems.INGOT, ItemIngot.INGOT_COPPER, new ModelResourceLocation(ImprovedMetals.MODID + ":ingot_copper", "inventory"));
 		ModelLoader.setCustomModelResourceLocation(IMItems.INGOT, ItemIngot.INGOT_TIN, new ModelResourceLocation(ImprovedMetals.MODID + ":ingot_tin", "inventory"));
 		ModelLoader.setCustomModelResourceLocation(IMItems.INGOT, ItemIngot.INGOT_BRONZE, new ModelResourceLocation(ImprovedMetals.MODID + ":ingot_bronze", "inventory"));
@@ -114,6 +127,15 @@ public class ClientProxy extends CommonProxy{
 		ModelLoader.setCustomModelResourceLocation(IMItems.PLATE, ItemPlate.PLATE_IMPROVED_GLOWSTONE, new ModelResourceLocation(ImprovedMetals.MODID + ":plate_improved_glowstone", "inventory"));
 		ModelLoader.setCustomModelResourceLocation(IMItems.PLATE, ItemPlate.PLATE_WITHER, new ModelResourceLocation(ImprovedMetals.MODID + ":plate_wither", "inventory"));
 		ModelLoader.setCustomModelResourceLocation(IMItems.PLATE, ItemPlate.PLATE_DRAGON, new ModelResourceLocation(ImprovedMetals.MODID + ":plate_dragon", "inventory"));
+		
+		ModelLoader.setCustomModelResourceLocation(IMItems.DUST, ItemDust.DUST_COPPER, new ModelResourceLocation(ImprovedMetals.MODID + ":dust_copper", "inventory"));
+		ModelLoader.setCustomModelResourceLocation(IMItems.DUST, ItemDust.DUST_TIN, new ModelResourceLocation(ImprovedMetals.MODID + ":dust_tin", "inventory"));
+		ModelLoader.setCustomModelResourceLocation(IMItems.DUST, ItemDust.DUST_BRONZE, new ModelResourceLocation(ImprovedMetals.MODID + ":dust_bronze", "inventory"));
+		ModelLoader.setCustomModelResourceLocation(IMItems.DUST, ItemDust.DUST_SILVER, new ModelResourceLocation(ImprovedMetals.MODID + ":dust_silver", "inventory"));
+		ModelLoader.setCustomModelResourceLocation(IMItems.DUST, ItemDust.DUST_LEAD, new ModelResourceLocation(ImprovedMetals.MODID + ":dust_lead", "inventory"));
+		ModelLoader.setCustomModelResourceLocation(IMItems.DUST, ItemDust.DUST_PRISMARINE, new ModelResourceLocation(ImprovedMetals.MODID + ":dust_prismarine", "inventory"));
+		ModelLoader.setCustomModelResourceLocation(IMItems.DUST, ItemDust.DUST_WITHER, new ModelResourceLocation(ImprovedMetals.MODID + ":dust_wither", "inventory"));
+		ModelLoader.setCustomModelResourceLocation(IMItems.DUST, ItemDust.DUST_DRAGON, new ModelResourceLocation(ImprovedMetals.MODID + ":dust_dragon", "inventory"));
 		
 		ModelLoader.setCustomModelResourceLocation(IMItems.NUGGET, ItemNugget.NUGGET_COPPER, new ModelResourceLocation(ImprovedMetals.MODID + ":nugget_copper", "inventory"));
 		ModelLoader.setCustomModelResourceLocation(IMItems.NUGGET, ItemNugget.NUGGET_TIN, new ModelResourceLocation(ImprovedMetals.MODID + ":nugget_tin", "inventory"));
@@ -206,7 +228,7 @@ public class ClientProxy extends CommonProxy{
 		ModelLoader.setCustomModelResourceLocation(IMItems.FORGE_HAMMER, 0, new ModelResourceLocation(ImprovedMetals.MODID + ":forge_hammer", "inventory"));
 		
 		ModelLoader.setCustomModelResourceLocation(IMItems.ANTI_MATERIALIZER, 0, new ModelResourceLocation(ImprovedMetals.MODID + ":anti_materializer", "inventory"));
-		
+
 		ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(IMBlocks.COPPER_ORE), 0, new ModelResourceLocation(ImprovedMetals.MODID + ":oreCopper", "inventory"));
 		ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(IMBlocks.TIN_ORE), 0, new ModelResourceLocation(ImprovedMetals.MODID + ":oreTin", "inventory"));
 		ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(IMBlocks.SILVER_ORE), 0, new ModelResourceLocation(ImprovedMetals.MODID + ":oreSilver", "inventory"));
@@ -230,27 +252,7 @@ public class ClientProxy extends CommonProxy{
 		ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(IMBlocks.IMPROVED_GLOWSTONE_BLOCK), 0, new ModelResourceLocation(ImprovedMetals.MODID + ":blockImprovedGlowstone", "inventory"));
 		ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(IMBlocks.WITHER_BLOCK), 0, new ModelResourceLocation(ImprovedMetals.MODID + ":blockWither", "inventory"));
 		ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(IMBlocks.DRAGON_BLOCK), 0, new ModelResourceLocation(ImprovedMetals.MODID + ":blockDragon", "inventory"));
-		
-		ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(IMBlocks.WITHER_OBSIDIAN), 0, new ModelResourceLocation(ImprovedMetals.MODID + ":blockWitherObsidian", "inventory"));
-		ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(IMBlocks.DRAGON_OBSIDIAN), 0, new ModelResourceLocation(ImprovedMetals.MODID + ":blockDragonObsidian", "inventory"));
-		
-		ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(IMBlocks.COMBINATOR_TIER1), 0, new ModelResourceLocation(ImprovedMetals.MODID + ":blockCombinatorTier1", "inventory"));
-		ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(IMBlocks.COMBINATOR_TIER2), 0, new ModelResourceLocation(ImprovedMetals.MODID + ":blockCombinatorTier2", "inventory"));
-		ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(IMBlocks.COMBINATOR_TIER3), 0, new ModelResourceLocation(ImprovedMetals.MODID + ":blockCombinatorTier3", "inventory"));
-		ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(IMBlocks.COMBINATOR_TIER4), 0, new ModelResourceLocation(ImprovedMetals.MODID + ":blockCombinatorTier4", "inventory"));
-		
-		ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(IMBlocks.SOLAR_TIER1), 0, new ModelResourceLocation(ImprovedMetals.MODID + ":blockSolarPanelTier1", "inventory"));
-		ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(IMBlocks.SOLAR_TIER2), 0, new ModelResourceLocation(ImprovedMetals.MODID + ":blockSolarPanelTier2", "inventory"));
-		ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(IMBlocks.SOLAR_TIER3), 0, new ModelResourceLocation(ImprovedMetals.MODID + ":blockSolarPanelTier3", "inventory"));
-		ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(IMBlocks.SOLAR_TIER4), 0, new ModelResourceLocation(ImprovedMetals.MODID + ":blockSolarPanelTier4", "inventory"));
-		ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(IMBlocks.SOLAR_TIER5), 0, new ModelResourceLocation(ImprovedMetals.MODID + ":blockSolarPanelTier5", "inventory"));
-		ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(IMBlocks.SOLAR_TIER6), 0, new ModelResourceLocation(ImprovedMetals.MODID + ":blockSolarPanelTier6", "inventory"));
-		ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(IMBlocks.SOLAR_TIER7), 0, new ModelResourceLocation(ImprovedMetals.MODID + ":blockSolarPanelTier7", "inventory"));
-		ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(IMBlocks.SOLAR_TIER8), 0, new ModelResourceLocation(ImprovedMetals.MODID + ":blockSolarPanelTier8", "inventory"));
-		ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(IMBlocks.SOLAR_TIER9), 0, new ModelResourceLocation(ImprovedMetals.MODID + ":blockSolarPanelTier9", "inventory"));
-		ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(IMBlocks.SOLAR_TIER10), 0, new ModelResourceLocation(ImprovedMetals.MODID + ":blockSolarPanelTier10", "inventory"));
-		
-		
+
 		ModelLoader.setCustomModelResourceLocation(IMItems.EMERALD_HELMET, 0, new ModelResourceLocation(ImprovedMetals.MODID + ":emerald_helmet", "inventory"));
 		ModelLoader.setCustomModelResourceLocation(IMItems.EMERALD_CHEST, 0, new ModelResourceLocation(ImprovedMetals.MODID + ":emerald_chest", "inventory"));
 		ModelLoader.setCustomModelResourceLocation(IMItems.EMERALD_LEGGS, 0, new ModelResourceLocation(ImprovedMetals.MODID + ":emerald_leggs", "inventory"));

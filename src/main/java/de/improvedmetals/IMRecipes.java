@@ -1,6 +1,6 @@
 package de.improvedmetals;
 
-import de.improvedmetals.api.ImprovedMetalsAPI;
+import de.improvedmetals.common.items.material.ItemDust;
 import de.improvedmetals.common.items.material.ItemIngot;
 import de.improvedmetals.common.items.material.ItemNugget;
 import de.improvedmetals.common.items.material.ItemPlate;
@@ -16,6 +16,7 @@ public class IMRecipes {
 		normalCrafting();
 		normalSmelting();
 		normalCombiantor();
+		normalNebulizer();
 	}
 	
 	
@@ -197,16 +198,7 @@ public class IMRecipes {
 		GameRegistry.addShapelessRecipe(new ItemStack(IMItems.INGOT, 4, ItemIngot.INGOT_IMPROVED_GLOWSTONE), new ItemStack(IMBlocks.IMPROVED_GLOWSTONE_BLOCK));
 		GameRegistry.addShapelessRecipe(new ItemStack(IMItems.INGOT, 4, ItemIngot.INGOT_WITHER), new ItemStack(IMBlocks.WITHER_BLOCK));
 		GameRegistry.addShapelessRecipe(new ItemStack(IMItems.INGOT, 4, ItemIngot.INGOT_DRAGON), new ItemStack(IMBlocks.DRAGON_BLOCK));
-	
-		GameRegistry.addRecipe(new ItemStack(IMItems.SOLAR_PANEL_SCREEN, 4), "XLX", "RXR", "XLX", 'X', Blocks.GLASS, 'L', new ItemStack(Items.DYE, 1, 4), 'R', Items.REDSTONE);
-		
-		GameRegistry.addRecipe(new ItemStack(IMBlocks.COMBINATOR_TIER1), "DXD", "XRX", "DXD", 'D', Blocks.FURNACE, 'X', Blocks.STONE, 'R', Blocks.DIAMOND_BLOCK);
-		GameRegistry.addRecipe(new ItemStack(IMBlocks.COMBINATOR_TIER2), "DXD", "XRX", "DXD", 'D', Blocks.FURNACE, 'X', Blocks.EMERALD_BLOCK, 'R', IMBlocks.COMBINATOR_TIER1);
-		GameRegistry.addRecipe(new ItemStack(IMBlocks.COMBINATOR_TIER3), "DXD", "XRX", "DXD", 'D', Blocks.FURNACE, 'X', IMBlocks.DIAMOND_BLOCK, 'R', IMBlocks.COMBINATOR_TIER2);
-		GameRegistry.addRecipe(new ItemStack(IMBlocks.COMBINATOR_TIER4), "DXD", "XRX", "DXD", 'D', Blocks.FURNACE, 'X', IMBlocks.IMPROVED_DIAMOND_BLOCK, 'R', IMBlocks.COMBINATOR_TIER3);
-				
-		GameRegistry.addRecipe(new ItemStack(IMBlocks.SOLAR_TIER1), "GGG", "IQI", "IRI", 'G', Blocks.GLASS, 'I', Items.IRON_INGOT, 'Q', Items.QUARTZ, 'R', Items.REDSTONE);
-		
+
 		GameRegistry.addShapelessRecipe(new ItemStack(IMItems.PLATE, 1, ItemPlate.PLATE_COPPER), new ItemStack(IMItems.INGOT, 1, ItemIngot.INGOT_COPPER), new ItemStack(IMItems.INGOT, 1, ItemIngot.INGOT_COPPER), new ItemStack(IMItems.INGOT, 1, ItemIngot.INGOT_COPPER), new ItemStack(IMItems.INGOT, 1, ItemIngot.INGOT_COPPER), new ItemStack(IMItems.FORGE_HAMMER, 1, OreDictionary.WILDCARD_VALUE));
 		GameRegistry.addShapelessRecipe(new ItemStack(IMItems.PLATE, 1, ItemPlate.PLATE_TIN), new ItemStack(IMItems.INGOT, 1, ItemIngot.INGOT_TIN), new ItemStack(IMItems.INGOT, 1, ItemIngot.INGOT_TIN), new ItemStack(IMItems.INGOT, 1, ItemIngot.INGOT_TIN), new ItemStack(IMItems.INGOT, 1, ItemIngot.INGOT_TIN), new ItemStack(IMItems.FORGE_HAMMER, 1, OreDictionary.WILDCARD_VALUE));
 		GameRegistry.addShapelessRecipe(new ItemStack(IMItems.PLATE, 1, ItemPlate.PLATE_BRONZE), new ItemStack(IMItems.INGOT, 1, ItemIngot.INGOT_BRONZE), new ItemStack(IMItems.INGOT, 1, ItemIngot.INGOT_BRONZE), new ItemStack(IMItems.INGOT, 1, ItemIngot.INGOT_BRONZE), new ItemStack(IMItems.INGOT, 1, ItemIngot.INGOT_BRONZE), new ItemStack(IMItems.FORGE_HAMMER, 1, OreDictionary.WILDCARD_VALUE));
@@ -267,49 +259,21 @@ public class IMRecipes {
 		GameRegistry.addSmelting(IMBlocks.SILVER_ORE, new ItemStack(IMItems.INGOT, 1, ItemIngot.INGOT_SILVER), 0.1F);
 		GameRegistry.addSmelting(IMBlocks.LEAD_ORE, new ItemStack(IMItems.INGOT, 1, ItemIngot.INGOT_LEAD), 0.1F);
 		GameRegistry.addSmelting(IMBlocks.PRISMARINE_ORE, new ItemStack(Items.PRISMARINE_SHARD), 0.1F);
+		GameRegistry.addSmelting(new ItemStack(IMItems.DUST, 1, ItemDust.DUST_COPPER), new ItemStack(IMItems.INGOT, 1, ItemIngot.INGOT_COPPER), 0.1F);
+		GameRegistry.addSmelting(new ItemStack(IMItems.DUST, 1, ItemDust.DUST_TIN), new ItemStack(IMItems.INGOT, 1, ItemIngot.INGOT_TIN), 0.1F);
+		GameRegistry.addSmelting(new ItemStack(IMItems.DUST, 1, ItemDust.DUST_BRONZE), new ItemStack(IMItems.INGOT, 1, ItemIngot.INGOT_BRONZE), 0.1F);
+		GameRegistry.addSmelting(new ItemStack(IMItems.DUST, 1, ItemDust.DUST_LEAD), new ItemStack(IMItems.INGOT, 1, ItemIngot.INGOT_LEAD), 0.1F);
+		GameRegistry.addSmelting(new ItemStack(IMItems.DUST, 1, ItemDust.DUST_SILVER), new ItemStack(IMItems.INGOT, 1, ItemIngot.INGOT_SILVER), 0.1F);
+		GameRegistry.addSmelting(new ItemStack(IMItems.DUST, 1, ItemDust.DUST_PRISMARINE), new ItemStack(IMItems.INGOT, 1, ItemIngot.INGOT_PRISMARINE), 0.1F);
 		
 	}
 	
 	private static void normalCombiantor(){
 		
-		ImprovedMetalsAPI.addCombinatorRecipe(new ItemStack(IMItems.INGOT, 4, ItemIngot.INGOT_BRONZE), 400, 0.1F, "ingotCopper*1", "ingotCopper*1", "ingotCopper*1", "ingotTin*1");
-		
-		ImprovedMetalsAPI.addCombinatorRecipe(new ItemStack(IMItems.INGOT, 1, ItemIngot.INGOT_DIAMOND), 1600, 0.1F, "gemDiamond*1", "gemDiamond*1", "gemDiamond*1", "gemDiamond*1");
-		ImprovedMetalsAPI.addCombinatorRecipe(new ItemStack(IMItems.INGOT, 1, ItemIngot.INGOT_EMERALD), 1600, 0.1F, "gemEmerald*1", "gemEmerald*1", "gemEmerald*1", "gemEmerald*1");
-		ImprovedMetalsAPI.addCombinatorRecipe(new ItemStack(IMItems.INGOT, 1, ItemIngot.INGOT_OBSIDIAN), 1600, 0.1F, "blockObsidian*1", "blockObsidian*1", "blockObsidian*1", "blockObsidian*1");
-		ImprovedMetalsAPI.addCombinatorRecipe(new ItemStack(IMItems.INGOT, 1, ItemIngot.INGOT_GLOWSTONE), 1600, 0.1F, "dustGlowstone*1", "dustGlowstone*1", "dustGlowstone*1", "dustGlowstone*1");
-		ImprovedMetalsAPI.addCombinatorRecipe(new ItemStack(IMItems.INGOT, 1, ItemIngot.INGOT_PRISMARINE), 1600, 0.1F, "materialPrismarine*1", "materialPrismarine*1", "materialPrismarine*1", "materialPrismarine*1");
-		
-		ImprovedMetalsAPI.addCombinatorRecipe(new ItemStack(IMItems.INGOT, 1, ItemIngot.INGOT_IMPROVED_DIAMOND), 1600, 0.1F, "ingotDiamond*1");
-		ImprovedMetalsAPI.addCombinatorRecipe(new ItemStack(IMItems.INGOT, 1, ItemIngot.INGOT_IMPROVED_EMERALD), 1600, 0.1F, "ingotEmerald*1");
-		ImprovedMetalsAPI.addCombinatorRecipe(new ItemStack(IMItems.INGOT, 1, ItemIngot.INGOT_IMPROVED_GLOWSTONE), 1600, 0.1F, "ingotGlowstone*1");
-		ImprovedMetalsAPI.addCombinatorRecipe(new ItemStack(IMItems.INGOT, 1, ItemIngot.INGOT_IMPROVED_OBSIDiAN), 1600, 0.1F, "ingotObsidian*1");
-		
-		ImprovedMetalsAPI.addCombinatorRecipe(new ItemStack(IMItems.INGOT, 1, ItemIngot.INGOT_WITHER), 3200, 0.1F, "ingotImprovedDiamond*1", "ingotImprovedObsidian*1", "materialWitherBone*1", "materialWitherBone*1");
-		ImprovedMetalsAPI.addCombinatorRecipe(new ItemStack(IMItems.INGOT, 1, ItemIngot.INGOT_DRAGON), 6400, 0.1F, "ingotWither*1", "ingotWither*1", "materialDragonClaw*1", "materialDragonScale*1");
-		
-		ImprovedMetalsAPI.addCombinatorRecipe(new ItemStack(IMBlocks.COPPER_BLOCK), 3200, 0.1F, "ingotCopper*1", "ingotCopper*1", "ingotCopper*1", "ingotCopper*1");
-		ImprovedMetalsAPI.addCombinatorRecipe(new ItemStack(IMBlocks.TIN_BLOCK), 3200, 0.1F, "ingotTin*1", "ingotTin*1", "ingotTin*1", "ingotTin*1");
-		ImprovedMetalsAPI.addCombinatorRecipe(new ItemStack(IMBlocks.BRONZE_BLOCK), 3200, 0.1F, "ingotBronze*1", "ingotBronze*1", "ingotBronze*1", "ingotBronze*1");
-		ImprovedMetalsAPI.addCombinatorRecipe(new ItemStack(IMBlocks.SILVER_BLOCK), 3200, 0.1F, "ingotSilver*1", "ingotSilver*1", "ingotSilver*1", "ingotSilver*1");
-		ImprovedMetalsAPI.addCombinatorRecipe(new ItemStack(IMBlocks.LEAD_BLOCK), 3200, 0.1F, "ingotLead*1", "ingotLead*1", "ingotLead*1", "ingotLead*1");
-		ImprovedMetalsAPI.addCombinatorRecipe(new ItemStack(IMBlocks.DIAMOND_BLOCK), 3200, 0.1F, "ingotDiamond*1", "ingotDiamond*1", "ingotDiamond*1", "ingotDiamond*1");
-		ImprovedMetalsAPI.addCombinatorRecipe(new ItemStack(IMBlocks.EMERALD_BLOCK), 3200, 0.1F, "ingotEmerald*1", "ingotEmerald*1", "ingotEmerald*1", "ingotEmerald*1");
-		ImprovedMetalsAPI.addCombinatorRecipe(new ItemStack(IMBlocks.OBSIDIAN_BLOCK), 3200, 0.1F, "ingotObsidian*1", "ingotObsidian*1", "ingotObsidian*1", "ingotObsidian*1");
-		ImprovedMetalsAPI.addCombinatorRecipe(new ItemStack(IMBlocks.GLOWSTONE_BLOCK), 3200, 0.1F, "ingotGlowstone*1", "ingotGlowstone*1", "ingotGlowstone*1", "ingotGlowstone*1");
-		ImprovedMetalsAPI.addCombinatorRecipe(new ItemStack(IMBlocks.PRISMARINE_BLOCK), 3200, 0.1F, "ingotPrismarine*1", "ingotPrismarine*1", "ingotPrismarine*1", "ingotPrismarine*1");
-		ImprovedMetalsAPI.addCombinatorRecipe(new ItemStack(IMBlocks.IMPROVED_DIAMOND_BLOCK, 1), 6400, 0.1F, "blockMetalDiamond*1", "blockMetalDiamond*1", "blockMetalDiamond*1", "blockMetalDiamond*1");
-		ImprovedMetalsAPI.addCombinatorRecipe(new ItemStack(IMBlocks.IMPROVED_EMERALD_BLOCK, 1), 6400, 0.1F, "blockMetalEmerald*1", "blockMetalEmerald*1", "blockMetalEmerald*1", "blockMetalEmerald*1");
-		ImprovedMetalsAPI.addCombinatorRecipe(new ItemStack(IMBlocks.IMPROVED_OBSIDIAN_BLOCK, 1), 6400, 0.1F, "blockMetalObsidian*1", "blockMetalObsidian*1", "blockMetalObsidian*1", "blockMetalObsidian*1");
-		ImprovedMetalsAPI.addCombinatorRecipe(new ItemStack(IMBlocks.IMPROVED_GLOWSTONE_BLOCK, 1), 6400, 0.1F, "blockMetalGlowstone*1", "blockMetalGlowstone*1", "blockMetalGlowstone*1", "blockMetalGlowstone*1");
-		ImprovedMetalsAPI.addCombinatorRecipe(new ItemStack(IMBlocks.WITHER_BLOCK, 1), 6400, 0.1F, "ingotWither*1", "ingotWither*1", "ingotWither*1", "ingotWither*1");
-		ImprovedMetalsAPI.addCombinatorRecipe(new ItemStack(IMBlocks.DRAGON_BLOCK, 1), 6400, 0.1F, "ingotDragon*1", "ingotDragon*1", "ingotDragon*1", "ingotDragon*1");
-		
-		ImprovedMetalsAPI.addCombinatorRecipe(new ItemStack(IMBlocks.SOLAR_TIER2), 8000, 0.1F, "blockSolarPanelTier1*1", "blockSolarPanelTier1*1", "blockSolarPanelTier1*1", "blockSolarPanelTier1*1");
-		ImprovedMetalsAPI.addCombinatorRecipe(new ItemStack(IMBlocks.SOLAR_TIER3), 9600, 0.1F, "blockSolarPanelTier2*1", "blockSolarPanelTier2*1", "blockSolarPanelTier2*1", "blockSolarPanelTier2*1");
-		ImprovedMetalsAPI.addCombinatorRecipe(new ItemStack(IMBlocks.SOLAR_TIER4), 11200, 0.1F, "blockSolarPanelTier3*1", "blockSolarPanelTier3*1", "blockSolarPanelTier3*1", "blockSolarPanelTier3*1");
-		ImprovedMetalsAPI.addCombinatorRecipe(new ItemStack(IMBlocks.SOLAR_TIER5), 12800, 0.1F, "blockSolarPanelTier4*1", "blockSolarPanelTier4*1", "blockSolarPanelTier4*1", "blockSolarPanelTier4*1");
-		ImprovedMetalsAPI.addCombinatorRecipe(new ItemStack(IMBlocks.SOLAR_TIER6), 14400, 0.1F, "blockSolarPanelTier5*1", "blockSolarPanelTier5*1", "blockSolarPanelTier5*1", "blockSolarPanelTier5*1");
+	}
+	
+	private static void normalNebulizer(){
+
 		
 	}
 	

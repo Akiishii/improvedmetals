@@ -34,19 +34,19 @@ import de.improvedmetals.common.items.armor.wither.ItemWitherBoots;
 import de.improvedmetals.common.items.armor.wither.ItemWitherChest;
 import de.improvedmetals.common.items.armor.wither.ItemWitherHelmet;
 import de.improvedmetals.common.items.armor.wither.ItemWitherLeggs;
-import de.improvedmetals.common.items.energy.ItemBattery;
+import de.improvedmetals.common.items.material.ItemDust;
 import de.improvedmetals.common.items.material.ItemExperiencePearl;
 import de.improvedmetals.common.items.material.ItemIngot;
 import de.improvedmetals.common.items.material.ItemMaterial;
 import de.improvedmetals.common.items.material.ItemNugget;
 import de.improvedmetals.common.items.material.ItemPlate;
 import de.improvedmetals.common.items.tools.ToolAxe;
-import de.improvedmetals.common.items.tools.ToolChargedAntiMaterializer;
 import de.improvedmetals.common.items.tools.ToolForgeHammer;
 import de.improvedmetals.common.items.tools.ToolHoe;
 import de.improvedmetals.common.items.tools.ToolPickaxe;
 import de.improvedmetals.common.items.tools.ToolShovel;
 import de.improvedmetals.common.items.tools.ToolSword;
+import de.improvedmetals.common.items.tools.energy.ToolChargedAntiMaterializer;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
@@ -57,7 +57,7 @@ public class IMItems {
 	public static List<Item> ITEMS = new ArrayList();
 	
 	//Materials
-	public static Item INGOT, NUGGET, PLATE, DRAGON_CLAW, DRAGON_SCALE, WITHER_BONE, SOLAR_PANEL_SCREEN, EXPERIENCE_PEARL;
+	public static Item INGOT, NUGGET, PLATE, DUST, DRAGON_CLAW, DRAGON_SCALE, WITHER_BONE, EXPERIENCE_PEARL;
 	
 	//Tools
 	public static Item COPPER_AXE, BRONZE_AXE, EMERALD_AXE, OBSIDIAN_AXE, GLOWSTONE_AXE,PRISMARINE_AXE,IMPROVED_DIAMOND_AXE,IMPROVED_EMERALD_AXE,IMPROVED_OBSIDIAN_AXE,IMPROVED_GLOWSTONE_AXE, WITHER_AXE, DRAGON_AXE;
@@ -70,7 +70,7 @@ public class IMItems {
 
 	public static Item COPPER_SWORD, BRONZE_SWORD, EMERALD_SWORD, OBSIDIAN_SWORD, GLOWSTONE_SWORD, PRISMARINE_SWORD, IMPROVED_DIAMOND_SWORD, IMPROVED_EMERALD_SWORD, IMPROVED_OBSIDIAN_SWORD, IMPROVED_GLOWSTONE_SWORD, WITHER_SWORD, DRAGON_SWORD;
 
-	public static Item FORGE_HAMMER, ANTI_MATERIALIZER, BATTERY_2K, BATTERY_8K, BATTERY_32K, BATTERY_128K, BATTERY_512K, BATTERY_2M;
+	public static Item FORGE_HAMMER, ANTI_MATERIALIZER;
 	
 	//Armor
 	public static Item DRAGON_BOOTS, DRAGON_CHEST, DRAGON_LEGGS, DRAGON_HELMET;
@@ -95,10 +95,10 @@ public class IMItems {
 		INGOT = new ItemIngot();
 		NUGGET = new ItemNugget();
 		PLATE = new ItemPlate();
+		DUST = new ItemDust();
 		DRAGON_CLAW = new ItemMaterial("dragon_claw");
 		DRAGON_SCALE = new ItemMaterial("dragon_scale");
 		WITHER_BONE = new ItemMaterial("wither_bone");
-		SOLAR_PANEL_SCREEN = new ItemMaterial("solar_panel_screen");
 		EXPERIENCE_PEARL = new ItemExperiencePearl("experience_orb");
 		
 		COPPER_AXE = new ToolAxe(MaterialHandler.TOOLS.COPPER, "copper_axe");
@@ -169,13 +169,7 @@ public class IMItems {
 		FORGE_HAMMER = new ToolForgeHammer(256);
 		
 		ANTI_MATERIALIZER = new ToolChargedAntiMaterializer(40000, 120, 20, "antiMaterializer", "ItemAntiMaterializer");
-		BATTERY_2K = new ItemBattery(2000, 50, "battery2k", "ItemBattery2K");
-		BATTERY_8K = new ItemBattery(8000, 200, "battery8K", "ItemBattery8K");
-		BATTERY_32K = new ItemBattery(32000, 800, "battery32k", "ItemBattery32K");
-		BATTERY_128K = new ItemBattery(128000, 3200, "battery128k", "ItemBattery128K");
-		BATTERY_512K = new ItemBattery(512000, 12800, "battery512k", "ItemBattery512K");
-		BATTERY_2M = new ItemBattery(2048000, 51200, "battery2M", "ItemBattery2M");
-		
+
 		DRAGON_BOOTS = new ItemDragonBoots("dragon_boots", MaterialHandler.ARMOR.DRAGON, 0, EntityEquipmentSlot.FEET);
 		DRAGON_CHEST = new ItemDragonChest("dragon_chest", MaterialHandler.ARMOR.DRAGON, 0, EntityEquipmentSlot.CHEST);
 		DRAGON_LEGGS = new ItemDragonLeggs("dragon_leggs", MaterialHandler.ARMOR.DRAGON, 0, EntityEquipmentSlot.LEGS);
@@ -219,21 +213,15 @@ public class IMItems {
 		ITEMS.add(INGOT);
 		ITEMS.add(NUGGET);
 		ITEMS.add(PLATE);
+		ITEMS.add(DUST);
 		ITEMS.add(DRAGON_CLAW);
 		ITEMS.add(DRAGON_SCALE);
 		ITEMS.add(WITHER_BONE);
-		//ITEMS.add(SOLAR_PANEL_SCREEN);
 		ITEMS.add(EXPERIENCE_PEARL);
 		
 		ITEMS.add(FORGE_HAMMER);
 		ITEMS.add(ANTI_MATERIALIZER);
-		ITEMS.add(BATTERY_2K);
-		ITEMS.add(BATTERY_8K);
-		ITEMS.add(BATTERY_32K);
-		ITEMS.add(BATTERY_128K);
-		ITEMS.add(BATTERY_512K);
-		ITEMS.add(BATTERY_2M);
-		
+
 		if(ConfigValues.copperTools){
 			ITEMS.add(COPPER_AXE);
 			ITEMS.add(COPPER_HOE);

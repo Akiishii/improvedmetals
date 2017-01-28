@@ -83,7 +83,6 @@ public class ItemTeslaChargedArmor extends ItemArmor {
 
     @Override
     public void onArmorTick(World world, EntityPlayer player, ItemStack itemStack) {
-        //noinspection ConstantConditions
 
         if (player.inventory.armorInventory[3] !=null && player.inventory.armorInventory[3].getItem() == IMItems.TESLA_HELMET
                 && player.inventory.armorInventory[2] !=null && player.inventory.armorInventory[2].getItem() == IMItems.TESLA_JET_CHEST
@@ -103,18 +102,8 @@ public class ItemTeslaChargedArmor extends ItemArmor {
                     ticks++;
                 }
             }
-            if(player.inventory.armorInventory[3] != null && player.inventory.armorInventory[3].getItem() == IMItems.TESLA_HELMET){
-            	player.addPotionEffect(new PotionEffect(MobEffects.NIGHT_VISION, 5, 0, true, false));
-            }
-            if(player.inventory.armorInventory[2] != null && player.inventory.armorInventory[2].getItem() == IMItems.TESLA_JET_CHEST || player.inventory.armorInventory[2].getItem() == IMItems.TESLA_CHEST){
-            	player.addPotionEffect(new PotionEffect(MobEffects.ABSORPTION, 5, 2, true, false));
-            }
-            if(player.inventory.armorInventory[1] != null && player.inventory.armorInventory[1].getItem() == IMItems.TESLA_LEGGS){
-            	player.addPotionEffect(new PotionEffect(MobEffects.JUMP_BOOST, 5, 2, true, false));
-            }
-            if(player.inventory.armorInventory[0] != null && player.inventory.armorInventory[0].getItem() == IMItems.TESLA_BOOTS){
-            	player.addPotionEffect(new PotionEffect(MobEffects.SPEED, 5, 2, true, false));
-            }
+
+
         } else {
             player.capabilities.allowFlying = false;
             player.capabilities.isFlying = false;
